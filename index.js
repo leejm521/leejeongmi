@@ -1,6 +1,8 @@
 $(document).ready(function(){
+    
+    
     let main = $(".main").offset().top;
-    let profile = $(".profile").offset().top;
+    let profile = $(".profile").offset().top+10;
     let skill = $(".skill").offset().top;
     let portfolio1 = $(".portfolio_1").offset().top;
     let portfolio2 = $(".portfolio_2").offset().top;
@@ -24,27 +26,33 @@ $(document).ready(function(){
             $(".deco").animate({"right":"0%", "opacity":"0"}, 1500);
             $(".box").animate({"opacity":"0"}, 1500);
             $(".scroll").stop().fadeOut();
-        }else if(scroll>=profile && scroll<skill){
+        }
+        else if(scroll>=profile && scroll<skill){
             $(".side_menu>li").eq(1).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(1).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(1).find(".ball").addClass("ball_on");
-        }else if(scroll>=skill && scroll<portfolio1){
+        }
+        else if(scroll>=skill && scroll<portfolio1){
             $(".side_menu>li").eq(2).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(2).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(2).find(".ball").addClass("ball_on");
-        }else if(scroll>=portfolio1 && scroll<portfolio2){
+        }
+        else if(scroll>=portfolio1 && scroll<portfolio2){
             $(".side_menu>li").eq(3).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(3).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(3).find(".ball").addClass("ball_on");
-        }else if(scroll>=portfolio2 && scroll<portfolio3){
+        }
+        else if(scroll>=portfolio2 && scroll<portfolio3){
             $(".side_menu>li").eq(4).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(4).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(4).find(".ball").addClass("ball_on");
-        }else if(scroll>=portfolio3 && scroll<contact){
+        }
+        else if(scroll>=portfolio3 && scroll<contact){
             $(".side_menu>li").eq(5).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(5).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(5).find(".ball").addClass("ball_on");
-        }else{
+        }
+        else{
             $(".side_menu>li").eq(6).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(6).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(6).find(".ball").addClass("ball_on");
@@ -68,6 +76,14 @@ $(document).ready(function(){
         $(".cursor").toggle();
     });
 
+    $(".ticket>div").mouseenter(function(){
+        $(".ticket_left").css({"filter":"brightness(90%)"});
+        $(".ticket_right").css({"filter":"brightness(90%)"});
+    });
+    $(".ticket>div").mouseleave(function(){
+        $(".ticket_left").css({"filter":"brightness(100%)"});
+        $(".ticket_right").css({"filter":"brightness(100%)"});
+    });
     $(".ticket>div").click(function(){
         $(".ticket_left").stop().animate({"left":"-100%", "rotate":"-5deg"}, 2000);
         $(".ticket_right").stop().animate({"right":"-100%", "rotate":"20deg"}, 2000);

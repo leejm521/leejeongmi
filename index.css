@@ -39,12 +39,25 @@ header h1{
     position: absolute;
     z-index: 100000;
     display: none;
+    animation: mouse 0.5s linear infinite;
 }
 .cursor p{
     font-size: 0.5vw;
     color: #007803;
     text-align: center;
     margin-top: 0.6vw;
+}
+
+@keyframes mouse{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
 }
 /* ----------------cursor end------------- */
 /* --------------------section start------------------------ */
@@ -122,6 +135,7 @@ section .side_menu>li>a>.bar .ball_on{
 /* ----------------main start----------------- */
 section .main{
     width: 100%; height: 50vw;
+    border: 1px solid red;
     position: relative;
     overflow: hidden;
 }
