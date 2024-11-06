@@ -627,16 +627,16 @@ section .portfolio_1 .portfol_gr .site_box>div .gr_bn3>li{
 section .portfolio_1 .portfol_gr .site_box>div .gr_bn>li.bn_on{display: block;}
 section .portfolio_1 .portfol_gr .site_box>div .gr_bn2>li.bn_on{display: block;}
 section .portfolio_1 .portfol_gr .site_box>div .gr_bn3>li.bn_on{display: block;}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_full{background-image: url(images/bn_samyang_full.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_web{background-image: url(images/bn_samyang_web.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_tab{background-image: url(images/bn_samyang_tab.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_mob{background-image: url(images/bn_samyang_mob.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_full2{background-image: url(images/bn_lala_full.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_web2{background-image: url(images/bn_lala_web.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_tab2{background-image: url(images/bn_lala_tab.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_mob2{background-image: url(images/bn_lala_mob.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_full3{background-image: url(images/bn_me_full.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_web3{background-image: url(images/bn_me_web.png);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_full{background-image: url(images/bn_samyang_full.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_web{background-image: url(images/bn_samyang_web.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_tab{background-image: url(images/bn_samyang_tab.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_mob{background-image: url(images/bn_samyang_mob.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_full2{background-image: url(images/bn_lala_full.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_web2{background-image: url(images/bn_lala_web.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_tab2{background-image: url(images/bn_lala_tab.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_mob2{background-image: url(images/bn_lala_mob.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_full3{background-image: url(images/bn_me_full.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_web3{background-image: url(images/bn_me_web.jpg);}
 section .portfolio_1 .portfol_gr .site_txt1{
     width: 50%;
     margin-left: 4%;
@@ -652,7 +652,7 @@ section .portfolio_1 .portfol_gr .site_txt1>div .txt_title{
     font-size: 1.2vw;
     color: rgb(70, 70, 70);
     font-weight: 600;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-bottom: 7%;
 }
 section .portfolio_1 .portfol_gr .site_txt1>div .txt_intro{
@@ -887,12 +887,12 @@ section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5>li:nth-child(3){left: -2
 /*  */
 section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4>li.bn_on{display: block;}
 section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5>li.bn_on{display: block;}
-section .portfolio_2 .portfol_gr .site_box2>div:nth-child(1) .gr_bn4 .bn_full4{background-image: url(images/bn_kfv_full.png);}
-section .portfolio_2 .portfol_gr .site_box2>div:nth-child(1) .gr_bn4 .bn_web4{background-image: url(images/bn_kfv_web.png);}
-section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_full5{background-image: url(images/bn_green_full.png);}
-section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_web5{background-image: url(images/bn_green_web.png);}
-section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_tab5{background-image: url(images/bn_green_tab.png);}
-section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_mob5{background-image: url(images/bn_green_mob.png);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(1) .gr_bn4 .bn_full4{background-image: url(images/bn_kfv_full.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(1) .gr_bn4 .bn_web4{background-image: url(images/bn_kfv_web.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_full5{background-image: url(images/bn_green_full.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_web5{background-image: url(images/bn_green_web.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_tab5{background-image: url(images/bn_green_tab.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_mob5{background-image: url(images/bn_green_mob.jpg);}
 
 section .portfolio_2 .portfol_gr .site_txt2{
     width: 50%;
@@ -909,7 +909,7 @@ section .portfolio_2 .portfol_gr .site_txt2>div .txt_title{
     font-size: 1.2vw;
     color: rgb(70, 70, 70);
     font-weight: 600;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-bottom: 7%;
 }
 section .portfolio_2 .portfol_gr .site_txt2>div .txt_intro{
@@ -1172,12 +1172,12 @@ section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8>li{
 section .portfolio_3 .portfol_gr .site_box3>div .gr_bn6>li.bn_on{display: block;}
 section .portfolio_3 .portfol_gr .site_box3>div .gr_bn7>li.bn_on{display: block;}
 section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8>li.bn_on{display: block;}
-section .portfolio_3 .portfol_gr .site_box3>div:nth-child(1) .gr_bn6 .bn_full6{background-image: url(images/bn_cu_full.png);}
-section .portfolio_3 .portfol_gr .site_box3>div:nth-child(1) .gr_bn6 .bn_web6{background-image: url(images/bn_cu_web.png);}
-section .portfolio_3 .portfol_gr .site_box3>div:nth-child(2) .gr_bn7 .bn_full7{background-image: url(images/bn_dorco_full.png);}
-section .portfolio_3 .portfol_gr .site_box3>div:nth-child(2) .gr_bn7 .bn_web7{background-image: url(images/bn_dorco_web.png);}
-section .portfolio_3 .portfol_gr .site_box3>div:nth-child(3) .gr_bn8 .bn_full8{background-image: url(images/bn_selecto_full.png);}
-section .portfolio_3 .portfol_gr .site_box3>div:nth-child(3) .gr_bn8 .bn_web8{background-image: url(images/bn_selecto_web.png);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(1) .gr_bn6 .bn_full6{background-image: url(images/bn_cu_full.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(1) .gr_bn6 .bn_web6{background-image: url(images/bn_cu_web.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(2) .gr_bn7 .bn_full7{background-image: url(images/bn_dorco_full.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(2) .gr_bn7 .bn_web7{background-image: url(images/bn_dorco_web.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(3) .gr_bn8 .bn_full8{background-image: url(images/bn_selecto_full.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(3) .gr_bn8 .bn_web8{background-image: url(images/bn_selecto_web.jpg);}
 
 section .portfolio_3 .portfol_gr .site_txt3{
     width: 50%;
@@ -1194,7 +1194,7 @@ section .portfolio_3 .portfol_gr .site_txt3>div .txt_title{
     font-size: 1.2vw;
     color: rgb(70, 70, 70);
     font-weight: 600;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-bottom: 7%;
 }
 section .portfolio_3 .portfol_gr .site_txt3>div .txt_intro{
