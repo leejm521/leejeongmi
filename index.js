@@ -149,6 +149,8 @@ $(document).ready(function(){
         
         $(".report_acco>li").removeClass("acco_on");
         $(".report_acco>li").eq(acc).addClass("acco_on");
+        $(".report_acco>li").find("a").removeClass("folder");
+        $(".report_acco>li").find("a").eq(acc).addClass("folder");
     });
 
     $(".btn_1>li").click(function(){

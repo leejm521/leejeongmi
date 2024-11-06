@@ -425,24 +425,24 @@ section .skill .report_box .report_acco>li{
 }
 section .skill .report_box .report_acco> li.all{
     margin-top: 10%;
-    background-image: url(images/acco_renewal_pre.png);
+    background-image: url(images/acco_renewal_pre.jpg);
 }
 section .skill .report_box .report_acco> li.kfv{
-    background-image: url(images/acco_kfv_pre.png);
+    background-image: url(images/acco_kfv_pre.jpg);
 }
 section .skill .report_box .report_acco> li.green{
-    background-image: url(images/acco_green_pre.png);
+    background-image: url(images/acco_green_pre.jpg);
 }.skill .report_box .report_acco li:nth-child(1).acco_on{
     height: 13vw;
-    background-image: url(images/acco_renewal.png);
+    background-image: url(images/acco_renewal.jpg);
 }
 section .skill .report_box .report_acco li:nth-child(2).acco_on{
     height: 13vw;
-    background-image: url(images/acco_kfv.png);
+    background-image: url(images/acco_kfv.jpg);
 }
 section .skill .report_box .report_acco li:nth-child(3).acco_on{
     height: 13vw;
-    background-image: url(images/acco_green.png);
+    background-image: url(images/acco_green.jpg);
 }
 section .skill .report_box .report_acco>li>a{
     width: 3vw; height: 3vw;
@@ -452,12 +452,26 @@ section .skill .report_box .report_acco>li>a{
     background-repeat: no-repeat;
     background-size: 50%;
     position: absolute;
-    right: 0; top: 10.2vw;
+    right: 0; top: 0vw;
     transition: all 0.5s;
+    display: none;
     /* background-color: #007803; */
+}
+section .skill .report_box .report_acco>li>a>h4{
+    font-size: 0.5vw;
+    padding-left: 0.95vw;
+    padding-top: 2.3vw;
+    color: #fff;
+    transition: all 0.5s;
+}
+section .skill .report_box .report_acco>li>a.folder{
+    display: block;
 }
 section .skill .report_box .report_acco>li>a:hover{
     background-image: url(images/acco_project_green.png);
+}
+section .skill .report_box .report_acco>li>a:hover>h4{
+    color: #007803;
 }
 /* ---------------skill end----------------- */
 /* ---------------portfolio_1 start-------------- */
@@ -731,7 +745,7 @@ section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow .arrow_line{
 }
 section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow .arrow_box{
     width: 5px; height: 5px;
-    margin-top: 0.45vw;
+    margin-top: 0.5vw;
     margin-left: -0.4vw;
     border-top: 2px solid rgb(70, 70, 70);
     border-right: 2px solid rgb(70, 70, 70);
@@ -984,7 +998,7 @@ section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow .arrow_line{
 }
 section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow .arrow_box{
     width: 5px; height: 5px;
-    margin-top: 0.45vw;
+    margin-top: 0.5vw;
     margin-left: -0.4vw;
     border-top: 2px solid rgb(70, 70, 70);
     border-right: 2px solid rgb(70, 70, 70);
@@ -1265,7 +1279,7 @@ section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow .arrow_line{
 }
 section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow .arrow_box{
     width: 5px; height: 5px;
-    margin-top: 0.45vw;
+    margin-top: 0.5vw;
     margin-left: -0.4vw;
     border-top: 2px solid rgb(70, 70, 70);
     border-right: 2px solid rgb(70, 70, 70);
