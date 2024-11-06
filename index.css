@@ -223,7 +223,6 @@ section .main  .profile .photo .circle_main{
     width: 30vw; height: 30vw;
     border: 1px solid #00780480;
     border-radius: 50%;
-    background-color: aquamarine;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -402,7 +401,6 @@ section .skill .report_box .report_acco{
 }
 section .skill .report_box .report_acco>li{
     width: 100%; height: 5vw;
-    background-color: #007803;
     margin-top: 2.5%;
     cursor: pointer;
     overflow: hidden;
