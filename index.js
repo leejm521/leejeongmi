@@ -1,5 +1,56 @@
 $(document).ready(function(){
-    let i = 0
+    let main = $(".main").offset().top;
+    let profile = $(".profile").offset().top;
+    let skill = $(".skill").offset().top;
+    let portfolio1 = $(".portfolio_1").offset().top;
+    let portfolio2 = $(".portfolio_2").offset().top;
+    let portfolio3 = $(".portfolio_3").offset().top;
+    let contact = $(".contact").offset().top;
+
+    $(window).scroll(function(){
+        let scroll = $(this).scrollTop();
+
+        $(".menu_title").removeClass("menu_on");
+        $(".bar").removeClass("bar_on");
+        $(".ball").removeClass("ball_on")
+        if(scroll>=main && scroll<profile){
+            $(".side_menu>li").eq(0).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(0).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(0).find(".ball").addClass("ball_on");
+
+            $(".ticket_left").stop().animate({"left":"0%", "rotate":"0deg"}, 1500);
+            $(".ticket_right").stop().animate({"right":"0%", "rotate":"0deg"}, 1500);
+            $(".photo").animate({"left":"-10%", "opacity":"0"}, 1500);
+            $(".deco").animate({"right":"0%", "opacity":"0"}, 1500);
+            $(".box").animate({"opacity":"0"}, 1500);
+            $(".scroll").stop().fadeOut();
+        }else if(scroll>=profile && scroll<skill){
+            $(".side_menu>li").eq(1).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(1).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(1).find(".ball").addClass("ball_on");
+        }else if(scroll>=skill && scroll<portfolio1){
+            $(".side_menu>li").eq(2).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(2).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(2).find(".ball").addClass("ball_on");
+        }else if(scroll>=portfolio1 && scroll<portfolio2){
+            $(".side_menu>li").eq(3).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(3).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(3).find(".ball").addClass("ball_on");
+        }else if(scroll>=portfolio2 && scroll<portfolio3){
+            $(".side_menu>li").eq(4).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(4).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(4).find(".ball").addClass("ball_on");
+        }else if(scroll>=portfolio3 && scroll<contact){
+            $(".side_menu>li").eq(5).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(5).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(5).find(".ball").addClass("ball_on");
+        }else{
+            $(".side_menu>li").eq(6).find(".menu_title").addClass("menu_on");
+            $(".side_menu>li").eq(6).find(".bar").addClass("bar_on");
+            $(".side_menu>li").eq(6).find(".ball").addClass("ball_on");
+        }
+    })
+
 
     $(".ticket>div").hover(function(){
         $(".cursor").toggle();
@@ -55,7 +106,6 @@ $(document).ready(function(){
     
     $(".side_menu>li").click(function(){
         let ii = $(this).index(); 
-
         $(".bar").removeClass("bar_on");
         $(".bar").eq(ii).addClass("bar_on");
         $(".ball").removeClass("ball_on");
@@ -63,7 +113,7 @@ $(document).ready(function(){
         $(".menu_title").removeClass("menu_on");
         $(".menu_title").eq(ii).addClass("menu_on");
     });
-
+    
     $(".report_acco>li").hover(function(){
         $(".cursor").toggle();
     });
@@ -72,8 +122,6 @@ $(document).ready(function(){
         
         $(".report_acco>li").removeClass("acco_on");
         $(".report_acco>li").eq(acc).addClass("acco_on");
-
-        
     });
 
     $(".btn_1>li").click(function(){

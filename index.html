@@ -23,55 +23,69 @@
     <section>
         <ul class="side_menu">
             <li>
-                <h3 class="menu_title menu_main menu_on">MAIN</h3>
-                <div class="bar bar_on">
-                    <div class="ball ball_on"></div>
-                </div>                
+                <a href="#move_main">
+                    <h3 class="menu_title menu_main menu_on">MAIN</h3>
+                    <div class="bar bar_on">
+                        <div class="ball ball_on"></div>
+                    </div>                
+                </a>
             </li>
             <li>
-                <h3 class="menu_title menu_profile active">PROFILE</h3>
-                <div class="bar active2">
-                    <div class="ball active3"></div>
-                </div>
+                <a href="#move_profile">
+                    <h3 class="menu_title menu_profile active">PROFILE</h3>
+                    <div class="bar active2">
+                        <div class="ball active3"></div>
+                    </div>
+                </a>
             </li>
             <li>
-                <h3 class="menu_title">SKILL</h3>
-                <div class="bar">
-                    <div class="ball"></div>
-                </div>
+                <a href="#move_skill">
+                    <h3 class="menu_title">SKILL</h3>
+                    <div class="bar">
+                        <div class="ball"></div>
+                    </div>
+                </a>
             </li>
             <li>
-                <h3 class="menu_title">PORTFOLIO_1</h3>
-                <div class="bar">
-                    <div class="ball"></div>
-                </div>
+                <a href="#move_portfolio1">
+                    <h3 class="menu_title">PORTFOLIO_1</h3>
+                    <div class="bar">
+                        <div class="ball"></div>
+                    </div>
+                </a>
             </li>
             <li>
-                <h3 class="menu_title">PORTFOLIO_2</h3>
-                <div class="bar">
-                    <div class="ball"></div>
-                </div>
+                <a href="#move_portfolio2">
+                    <h3 class="menu_title">PORTFOLIO_2</h3>
+                    <div class="bar">
+                        <div class="ball"></div>
+                    </div>
+                </a>
             </li>
             <li>
-                <h3 class="menu_title">PORTFOLIO_3</h3>
-                <div class="bar">
-                    <div class="ball"></div>
-                </div>
+                <a href="#move_portfolio3">
+                    <h3 class="menu_title">PORTFOLIO_3</h3>
+                    <div class="bar">
+                        <div class="ball"></div>
+                    </div>
+                </a>
             </li>
             <li>
-                <h3 class="menu_title">CONTACT</h3>
-                <div class="bar">
-                    <div class="ball"></div>
-                </div>
+                <a href="#move_contact">
+                    <h3 class="menu_title">CONTACT</h3>
+                    <div class="bar">
+                        <div class="ball"></div>
+                    </div>
+                </a>
             </li>
         </ul>
-        <div class="main">
-            <div class="ticket">
+        <div class="main" id="move_main">
+            <div class="ticket scroll_up">
                 <div class="ticket_left"><img src="images/ticket_01.png" alt="티켓 왼쪽"></div>
                 <div class="ticket_right"><img src="images/ticket_02.png" alt="티켓 오른쪽"></div>
                 <p class="ring"><img src="images/txt_ring.png" alt="텍스트 링"></p>
             </div>
-            <div class="profile">
+            <div class="profile"  id="move_profile">
                 <div class="photo">
                     <div class="circle_main"></div>
                     <div class="circle_1"></div>
@@ -109,7 +123,7 @@
                 <p>scroll</p>
             </div>
         </div>
-        <div class="skill">
+        <div class="skill" id="move_skill">
             <div class="skill_box">
                 <h3>SKILLS</h3>
                 <ul class="skill_ic_1">
@@ -141,7 +155,7 @@
                 </ul>
             </div>
         </div>
-        <div class="portfolio_1">
+        <div class="portfolio_1" id="move_portfolio1">
             <h1>PORTFOLIO - PERSONAL PROJECT</h1>
             <ul class="btn_1">
                 <li class="samyang btn_on">SAMYANG</li>
@@ -182,14 +196,10 @@
                         <ul class="gr_btn3">
                             <li class="btn_full3 cover"><img src="images/device_full.png" alt="기기전체"></li>
                             <li class="btn_web3"><img src="images/device_web.png" alt="웹 버전"></li>
-                            <li class="btn_tab3"><img src="images/device_tab.png" alt="탭 버전"></li>
-                            <li class="btn_mob3"><img src="images/device_mob.png" alt="모바일 버전"></li>
                         </ul>
                         <ul class="gr_bn3">
                             <li class="bn_full3 bn_on"></li>
                             <li class="bn_web3"></li>
-                            <li class="bn_tab3"></li>
-                            <li class="bn_mob3"></li>
                         </ul>
                     </div>
                 </div>
@@ -271,7 +281,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio_2">
+        <div class="portfolio_2" id="move_portfolio2">
             <h1>PORTFOLIO - TEAM PROJECT SITE</h1>
             <ul class="btn_2">
                 <li class="kfv btn_on">한국민속촌</li>
@@ -358,7 +368,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio_3">
+        <div class="portfolio_3" id="move_portfolio3">
             <h1>PORTFOLIO - CLON CODING</h1>
             <ul class="btn_3">
                 <li class="cu btn_on">CU</li>
@@ -475,7 +485,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact">
+        <div class="contact" id="move_contact">
             <div class="contact_gr">
                 <div class="contact_box">
                     <h1>CONTACT</h1>
@@ -505,5 +515,8 @@
             <p>I hope we can meet again if you remember me.</p>
         </div>
     </section>
+    <footer>
+        <h1>copyright ⓒ Lee Jeongmi. All Right Reserved.</h1>
+    </footer>
 </body>
 </html>

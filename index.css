@@ -3,6 +3,7 @@
 ul{list-style: none;}
 img{border: none; vertical-align: top;}
 a{text-decoration: none; color: black;}
+html{scroll-behavior: smooth;}
 
 body{
     background-color: #eeeded6c;
@@ -66,31 +67,34 @@ section .side_menu>li{
     position: relative;
     cursor: pointer;
 }
-section .side_menu>li h3{
+section .side_menu>li>a{
+    display: block;
+}
+section .side_menu>li>a>h3{
     font-size: 16px;
     color: #249828bd; 
     transition: all 0.3s;
 }
-section .side_menu>li .menu_on{
+section .side_menu>li>a>.menu_on{
     color: #007803;
     font-size: 18px;
 }
-section .side_menu>li .bar{
+section .side_menu>li>a>.bar{
     width: 50px; height: 10px;
     background-color: #24982841;
     position: absolute;
     right: 0; top: 11px;
     display: none;
 }
-section .side_menu>li:nth-child(2) .bar{width: 77px;}
-section .side_menu>li:nth-child(3) .bar{width: 53px;}
-section .side_menu>li:nth-child(4) .bar{width: 118px;}
-section .side_menu>li:nth-child(5) .bar,
-section .side_menu>li:nth-child(6) .bar
+section .side_menu>li:nth-child(2)>a>.bar{width: 77px;}
+section .side_menu>li:nth-child(3)>a>.bar{width: 53px;}
+section .side_menu>li:nth-child(4)>a>.bar{width: 118px;}
+section .side_menu>li:nth-child(5)>a>.bar,
+section .side_menu>li:nth-child(6)>a>.bar
 {width: 120px;}
-section .side_menu>li:nth-child(7) .bar{width: 85px;}
-section .side_menu>li .bar_on{display: block;}
-section .side_menu>li .bar .ball{
+section .side_menu>li:nth-child(7)>a>.bar{width: 85px;}
+section .side_menu>li>a>.bar_on{display: block;}
+section .side_menu>li>a>.bar .ball{
     width: 8px; height: 8px;
     border-radius: 50%;
     background-color: #24982841;
@@ -99,7 +103,7 @@ section .side_menu>li .bar .ball{
     z-index: -1;
     opacity: 0;
 }
-section .side_menu>li .bar .ball_on{
+section .side_menu>li>a>.bar .ball_on{
     animation: pin 1.2s infinite;
 }
 @keyframes pin {
@@ -156,7 +160,7 @@ section .main .scroll{
     width: 1.2vw; height: 3vw;
     position: absolute;
     left: 50%; translate: -50%;
-    top: 44vw;
+    top: 45.5vw;
     text-align: center;
     animation: mouseRoll 2.5s linear infinite;
     display: none;
@@ -184,7 +188,7 @@ section .main .scroll>p{
     }
     50%{
         opacity: 1;
-        top: 45vw;
+        top: 46vw;
     }
     100%{
         opacity: 0.2;
@@ -204,7 +208,8 @@ section .main .scroll>p{
 section .main .profile{
     width: 100%; height: 45vw;
     position: absolute;
-    left: 0; top: 8.5vw;
+    left: 0; top: 1vw;
+    padding-top: 8.5vw;
     z-index: -1;
     display: none;
 }
@@ -247,7 +252,7 @@ section .main  .profile .photo .circle_2{
 }
 section .main .profile .deco{
     position: absolute;
-    top: 12%; right: 30%;
+    top: 25%; right: 30%;
     z-index: 1;
     opacity: 0;
 }
@@ -268,7 +273,7 @@ section .main  .profile .box{
     width: 50%; height: 30vw;
     position: absolute;
     right: 0; top: 0;
-    padding-top: 3.5%;
+    padding-top: 11.5vw;
     padding-left: 5%;
     line-height: 1.8vw;
     opacity: 0;
@@ -310,6 +315,7 @@ section .main  .profile .box .history_box>ul>.nbsp{
 section .skill{
     width: 90%; height: 45vw;
     margin: 0 auto;
+    box-sizing: border-box;
     display: flex;
 }
 section .skill .skill_box>h3, section .skill .report_box>h3{
@@ -320,7 +326,8 @@ section .skill .skill_box>h3, section .skill .report_box>h3{
 }
 section .skill .skill_box{
     width: 28%; height: 38vw;
-    padding: 3%;    
+    padding: 3%;
+    padding-top: 10%;    
     padding-left: 7%;
     margin-left: 10%;
 }
@@ -388,6 +395,7 @@ section .skill .report_box{
     width: 50%; height: 38vw;
     margin-left: 0%;
     padding: 3%;
+    padding-top: 10%;
 }
 section .skill .report_box .report_acco{
     width: 75%; 
@@ -400,6 +408,7 @@ section .skill .report_box .report_acco>li{
     overflow: hidden;
     position: relative;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.5s;
 }
@@ -433,13 +442,19 @@ section .skill .report_box .report_acco>li>a{
     background-size: 50%;
     position: absolute;
     right: 0; top: 10.2vw;
+    transition: all 0.5s;
     /* background-color: #007803; */
+}
+section .skill .report_box .report_acco>li>a:hover{
+    background-image: url(images/acco_project_green.png);
 }
 /* ---------------skill end----------------- */
 /* ---------------portfolio_1 start-------------- */
 section .portfolio_1{
-    width: 80%; height: 45vw;
+    width: 80%; height: 55vw;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 7%;
 }
 section .portfolio_1>h1{
     font-family: "Jua", sans-serif;
@@ -595,10 +610,8 @@ section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_full2{ba
 section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_web2{background-image: url(images/bn_lala_web.png);}
 section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_tab2{background-image: url(images/bn_lala_tab.png);}
 section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_mob2{background-image: url(images/bn_lala_mob.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_full3{background-image: url(images/bn_lala_full.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_web3{background-image: url(images/bn_samyang_full.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_tab3{background-image: url(images/bn_samyang_full.png);}
-section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_mob3{background-image: url(images/bn_samyang_full.png);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_full3{background-image: url(images/bn_me_full.png);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_web3{background-image: url(images/bn_me_web.png);}
 section .portfolio_1 .portfol_gr .site_txt1{
     width: 50%;
     margin-left: 4%;
@@ -706,7 +719,7 @@ section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow .arrow_line{
     transition: all 0.3s;
 }
 section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow .arrow_box{
-    width: 0.3vw; height: 0.3vw;
+    width: 5px; height: 5px;
     margin-top: 0.45vw;
     margin-left: -0.4vw;
     border-top: 2px solid rgb(70, 70, 70);
@@ -730,9 +743,10 @@ section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover .arrow_box{bord
 /* ---------------portfolio_1 end-------------- */
 /* ---------------portfolio_2 start-------------- */
 section .portfolio_2{
-    width: 80%; height: 45vw;
+    width: 80%; height: 50vw;
     margin: 0 auto;
-    margin-top: 7vw;
+    box-sizing: border-box;
+    padding-top: 7%;
 }
 section .portfolio_2>h1{
     font-family: "Jua", sans-serif;
@@ -958,7 +972,7 @@ section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow .arrow_line{
     transition: all 0.3s;
 }
 section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow .arrow_box{
-    width: 0.3vw; height: 0.3vw;
+    width: 5px; height: 5px;
     margin-top: 0.45vw;
     margin-left: -0.4vw;
     border-top: 2px solid rgb(70, 70, 70);
@@ -982,9 +996,10 @@ section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover .arrow_box{bord
 /* ---------------portfolio_2 end-------------- */
 /* ---------------portfolio_3 start-------------- */
 section .portfolio_3{
-    width: 80%; height: 45vw;
+    width: 80%; height: 50vw;
     margin: 0 auto;
-    margin-top: 7vw;
+    box-sizing: border-box;
+    padding-top: 7%;
 }
 section .portfolio_3>h1{
     font-family: "Jua", sans-serif;
@@ -1238,7 +1253,7 @@ section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow .arrow_line{
     transition: all 0.3s;
 }
 section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow .arrow_box{
-    width: 0.3vw; height: 0.3vw;
+    width: 5px; height: 5px;
     margin-top: 0.45vw;
     margin-left: -0.4vw;
     border-top: 2px solid rgb(70, 70, 70);
@@ -1462,3 +1477,14 @@ section .contact>p:last-child{
     left: 48.5%; top: 70%;
 }
 /* ----------------contact end------------- */
+/* ----------------footer start------------------ */
+footer{
+    width: 100%; height: 5vw;
+    border-top: 1px solid rgba(128, 128, 128, 0.384);
+    text-align: center;
+}
+footer>h1{
+    font-size: 0.8vw;
+    font-weight: 200;
+    margin-top: 2vw;
+}
