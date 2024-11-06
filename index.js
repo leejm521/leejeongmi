@@ -21,17 +21,22 @@ $(document).ready(function(){
             $(".side_menu>li").eq(0).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(0).find(".ball").addClass("ball_on");
 
-            // $(".ticket_left").stop().animate({"left":"0%", "rotate":"0deg"}, 1500);
-            // $(".ticket_right").stop().animate({"right":"0%", "rotate":"0deg"}, 1500);
-            // $(".photo").animate({"left":"-10%", "opacity":"0"}, 1500);
-            // $(".deco").animate({"right":"0%", "opacity":"0"}, 1500);
-            // $(".box").animate({"opacity":"0"}, 1500);
-            // $(".scroll").stop().fadeOut();
+            $(".ticket_left").stop().animate({"left":"0%", "rotate":"0deg"}, 1500);
+            $(".ticket_right").stop().animate({"right":"0%", "rotate":"0deg"}, 1500);
+            $(".profile").stop().fadeOut();
         }
         else if(scroll>=profile && scroll<skill){
             $(".side_menu>li").eq(1).find(".menu_title").addClass("menu_on");
             $(".side_menu>li").eq(1).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(1).find(".ball").addClass("ball_on");
+
+            $(".ticket_left").stop().animate({"left":"-100%", "rotate":"-5deg"}, 2000);
+            $(".ticket_right").stop().animate({"right":"-100%", "rotate":"20deg"}, 2000);
+            $(".profile").show();
+            $(".photo").animate({"left":"5%", "opacity":"1"}, 1500);
+            $(".deco").animate({"right":"53%", "opacity":"1"}, 1500);
+            $(".box").animate({"opacity":"1"}, 500);
+            $(".scroll").stop().fadeIn();
         }
         else if(scroll>=skill && scroll<portfolio1){
             $(".side_menu>li").eq(2).find(".menu_title").addClass("menu_on");
@@ -96,7 +101,7 @@ $(document).ready(function(){
         $(".photo").animate({"left":"5%", "opacity":"1"}, 1500);
         $(".deco").animate({"right":"53%", "opacity":"1"}, 1500);
         $(".box").animate({"opacity":"1"}, 500);
-        $(".profile").stop().show();
+        $(".profile").show();
         $(".scroll").stop().fadeIn();
         $(".menu_title").removeClass("menu_on");
         $(".bar").removeClass("bar_on");
@@ -112,7 +117,7 @@ $(document).ready(function(){
         $(".photo").animate({"left":"5%", "opacity":"1"}, 1500);
         $(".deco").animate({"right":"53%", "opacity":"1"}, 1500);
         $(".box").animate({"opacity":"1"}, 500);
-        $(".profile").stop().show();
+        $(".profile").show();
         $(".scroll").stop().fadeIn();
         $(".menu_title").removeClass("menu_on");
     });
