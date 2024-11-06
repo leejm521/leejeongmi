@@ -135,7 +135,6 @@ section .side_menu>li>a>.bar .ball_on{
 /* ----------------main start----------------- */
 section .main{
     width: 100%; height: 50vw;
-    border: 1px solid red;
     position: relative;
     overflow: hidden;
 }
@@ -149,14 +148,14 @@ section .main .ticket{
 section .main .ticket .ticket_left{ 
     width: 70%; height: 23.5vw;
     position: absolute;
-    left: 0%; top: 20%;
+    left: 0%; top: 23%;
     cursor: pointer;
 }
 section .main .ticket .ticket_left img{width: 100%;}
 section .main .ticket .ticket_right{ 
     width: 30%; height: 23.5vw;
     position: absolute;
-    right: 0; top: 20%;
+    right: 0; top: 23%;
     cursor: pointer;
 }
 section .main .ticket .ticket_right img{height: 100%;}
@@ -164,7 +163,7 @@ section .main .ticket .ticket_right img{height: 100%;}
 section .main .ticket .ring{
     width: 10vw; height: 10vw;
     position: absolute;
-    top: 14%; left: -6.5%;
+    top: 17%; left: -4.5%;
     z-index: -1;
     animation: rings 4s linear infinite;
 }
@@ -223,7 +222,7 @@ section .main .profile{
     width: 100%; height: 45vw;
     position: absolute;
     left: 0; top: 1vw;
-    padding-top: 8.5vw;
+    padding-top: 9.5vw;
     z-index: -1;
     display: none;
 }
@@ -286,7 +285,7 @@ section .main  .profile .box{
     width: 50%; height: 30vw;
     position: absolute;
     right: 0; top: 0;
-    padding-top: 11.5vw;
+    padding-top: 12.5vw;
     padding-left: 5%;
     line-height: 1.8vw;
     opacity: 0;
@@ -1407,6 +1406,10 @@ section .contact .contact_gr  .contact_box .contact_cont .call>li:nth-child(2){
 section .contact .contact_gr  .contact_box .contact_cont .call>li:nth-child(3){
     background-image: url(images/contact_kakao.png);
 }
+section .contact .contact_gr  .contact_box:hover{
+    box-shadow: 0px 0px 20px #249828;
+}
+
 section .contact .contact_gr  .contact_behind{
     width: 100%; height: 25vw;
     border-radius: 11vw 11vw 0 0;

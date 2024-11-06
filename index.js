@@ -1,17 +1,18 @@
 $(document).ready(function(){
     
-    
-    let main = $(".main").offset().top;
-    let profile = $(".profile").offset().top+10;
-    let skill = $(".skill").offset().top;
-    let portfolio1 = $(".portfolio_1").offset().top;
-    let portfolio2 = $(".portfolio_2").offset().top;
-    let portfolio3 = $(".portfolio_3").offset().top;
-    let contact = $(".contact").offset().top;
+    let main = $("#move_main").offset().top;
+    let profile = $("#move_profile").offset().top+10;
+    let skill = $("#move_skill").offset().top;
+    let portfolio1 = $("#move_portfolio1").offset().top;
+    let portfolio2 = $("#move_portfolio2").offset().top;
+    let portfolio3 = $("#move_portfolio3").offset().top;
+    let contact = $("#move_contact").offset().top;
 
     $(window).scroll(function(){
-        let scroll = $(this).scrollTop();
+        let scrollTo = document.querySelector("#move_profile").scrollHeight;
+        console.log(scrollTo);
 
+        let scroll = $(this).scrollTop();
         $(".menu_title").removeClass("menu_on");
         $(".bar").removeClass("bar_on");
         $(".ball").removeClass("ball_on")
@@ -20,12 +21,12 @@ $(document).ready(function(){
             $(".side_menu>li").eq(0).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(0).find(".ball").addClass("ball_on");
 
-            $(".ticket_left").stop().animate({"left":"0%", "rotate":"0deg"}, 1500);
-            $(".ticket_right").stop().animate({"right":"0%", "rotate":"0deg"}, 1500);
-            $(".photo").animate({"left":"-10%", "opacity":"0"}, 1500);
-            $(".deco").animate({"right":"0%", "opacity":"0"}, 1500);
-            $(".box").animate({"opacity":"0"}, 1500);
-            $(".scroll").stop().fadeOut();
+            // $(".ticket_left").stop().animate({"left":"0%", "rotate":"0deg"}, 1500);
+            // $(".ticket_right").stop().animate({"right":"0%", "rotate":"0deg"}, 1500);
+            // $(".photo").animate({"left":"-10%", "opacity":"0"}, 1500);
+            // $(".deco").animate({"right":"0%", "opacity":"0"}, 1500);
+            // $(".box").animate({"opacity":"0"}, 1500);
+            // $(".scroll").stop().fadeOut();
         }
         else if(scroll>=profile && scroll<skill){
             $(".side_menu>li").eq(1).find(".menu_title").addClass("menu_on");
@@ -57,7 +58,11 @@ $(document).ready(function(){
             $(".side_menu>li").eq(6).find(".bar").addClass("bar_on");
             $(".side_menu>li").eq(6).find(".ball").addClass("ball_on");
         }
-    })
+    });
+    $(".btn_profile").click(function(){
+        $('html, body').animate({
+        scrollTop: $('#move_profile').offset().top + 10});
+    });
 
 
     $(".ticket>div").hover(function(){
@@ -72,6 +77,7 @@ $(document).ready(function(){
         cursor.style.left = mouseX + 'px';
         cursor.style.top = mouseY + 'px';
     });
+
     $(".side_menu>li").hover(function(){
         $(".cursor").toggle();
     });
