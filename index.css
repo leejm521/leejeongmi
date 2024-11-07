@@ -67,7 +67,7 @@ section{
 /* ---------------side_menu start--------------------- */
 section .side_menu{
     position: fixed;
-    top: 40%;
+    top:36%;
     right: 5%;
     text-align: right;
     font-family: "Jua", sans-serif;
@@ -76,7 +76,7 @@ section .side_menu{
     z-index: 50000;
 }
 section .side_menu>li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
     cursor: pointer;
 }
@@ -1517,3 +1517,11 @@ footer>h1{
     font-weight: 200;
     margin-top: 2vw;
 }
+
+/* -------------------------반응형--------------------------------- */
+/* ------------------------반응형 제작 예정--------------------------------- */
+/* ---------------------------mob ver.------------------------------ */
+@media all and (max-width: 768px){
+    section .side_menu{display: none;}
+}
+/* ------------------------ mob ver. 사이드메뉴 삭제--------------------------------- */

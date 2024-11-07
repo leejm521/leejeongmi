@@ -2,11 +2,11 @@ $(document).ready(function(){
     
     let main = $("#move_main").offset().top;
     let profile = $("#move_profile").offset().top+10;
-    let skill = $("#move_skill").offset().top;
-    let portfolio1 = $("#move_portfolio1").offset().top;
-    let portfolio2 = $("#move_portfolio2").offset().top;
-    let portfolio3 = $("#move_portfolio3").offset().top;
-    let contact = $("#move_contact").offset().top;
+    let skill = $("#move_skill").offset().top-100;
+    let portfolio1 = $("#move_portfolio1").offset().top-100;
+    let portfolio2 = $("#move_portfolio2").offset().top-100;
+    let portfolio3 = $("#move_portfolio3").offset().top-100;
+    let contact = $("#move_contact").offset().top-100;
 
     $(window).scroll(function(){
         let scrollTo = document.querySelector("#move_profile").scrollHeight;
@@ -259,3 +259,4 @@ $(document).ready(function(){
     });
 
 });
+
