@@ -1735,7 +1735,7 @@ section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li>div{
     margin-top: 0.25vw;
 }
 section .portfolio_3 .portfol_gr .site_txt3>div .website{
-    right: 0; bottom: 7%;
+    right: 0; bottom: 5%;
 }
 section .portfolio_3 .portfol_gr .site_txt3>div .website a::after{
     content: "";
