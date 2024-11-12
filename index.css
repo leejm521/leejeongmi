@@ -1,0 +1,1784 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+img{border: none; vertical-align: top;}
+a{text-decoration: none; color: black;}
+html{scroll-behavior: smooth;}
+
+body{
+    background-color: #eeeded6c;
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+header{
+    width: 100%;
+    height: 4.5vw;
+    border-bottom: 2px solid #007803;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #fffefeb7;
+    z-index: 100;
+}
+header h1{
+    margin-top: 1.3vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.2vw;
+    color: #007803;
+}
+/* --------------------header end------------------------ */
+/* ----------------cursor start------------- */
+.cursor{
+    width: 2vw; height: 2vw;
+    border: 1px solid green;
+    border-radius: 50%;
+    background-color: #ffffffaf;
+    position: absolute;
+    z-index: 100000;
+    display: none;
+    animation: mouse 0.5s linear infinite;
+}
+.cursor p{
+    font-size: 0.5vw;
+    color: #007803;
+    text-align: center;
+    margin-top: 0.6vw;
+}
+
+@keyframes mouse{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+/* ----------------cursor end------------- */
+/* --------------------section start------------------------ */
+section{
+    width: 100%;
+}
+/* ---------------side_menu start--------------------- */
+section .side_menu{
+    position: fixed;
+    top:18vw;
+    right: 5%;
+    text-align: right;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 50000;
+}
+section .side_menu>li{
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+section .side_menu>li>a{
+    display: block;
+}
+section .side_menu>li>a>h3{
+    font-size: 16px;
+    color: #249828bd; 
+    transition: all 0.3s;
+}
+section .side_menu>li>a>.menu_on{
+    color: #007803;
+    font-size: 18px;
+}
+section .side_menu>li>a>.bar{
+    width: 50px; height: 10px;
+    background-color: #24982841;
+    position: absolute;
+    right: 0; top: 11px;
+    display: none;
+}
+section .side_menu>li:nth-child(2)>a>.bar{width: 77px;}
+section .side_menu>li:nth-child(3)>a>.bar{width: 53px;}
+section .side_menu>li:nth-child(4)>a>.bar{width: 118px;}
+section .side_menu>li:nth-child(5)>a>.bar,
+section .side_menu>li:nth-child(6)>a>.bar
+{width: 120px;}
+section .side_menu>li:nth-child(7)>a>.bar{width: 85px;}
+section .side_menu>li>a>.bar_on{display: block;}
+section .side_menu>li>a>.bar .ball{
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background-color: #24982841;
+    position: absolute;
+    left: 0px; top: 1px;
+    z-index: -1;
+    opacity: 0;
+}
+section .side_menu>li>a>.bar .ball_on{
+    animation: pin 1.2s infinite;
+}
+@keyframes pin {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        left: -25px;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* ---------------side_menu end--------------------- */
+/* ----------------main start----------------- */
+section .main{
+    width: 100%; height: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+section .main .ticket{
+    width: 70%; height: 100%;;
+    margin: 0 auto;
+    padding-top: 14vw;
+    display: flex;
+    position: relative;
+}
+section .main .ticket .ticket_left{ 
+    width: 70%; height: 23.5vw;
+    position: absolute;
+    left: 0%; top: 23%;
+    cursor: pointer;
+}
+section .main .ticket .ticket_left img{width: 100%;}
+section .main .ticket .ticket_right{ 
+    width: 30%; height: 23.5vw;
+    position: absolute;
+    right: 0; top: 23%;
+    cursor: pointer;
+}
+section .main .ticket .ticket_right img{height: 100%;}
+
+section .main .ticket .ring{
+    width: 10vw; height: 10vw;
+    position: absolute;
+    top: 17%; left: -4.5%;
+    z-index: -1;
+    animation: rings 4s linear infinite;
+}
+section .main .ticket .ring img{width: 100%;}
+
+section .main .scroll{
+    width: 1.2vw; height: 3vw;
+    position: absolute;
+    left: 50%; translate: -50%;
+    top: 45.5vw;
+    text-align: center;
+    animation: mouseRoll 2.5s linear infinite;
+    display: none;
+} 
+section .main .scroll .mouse{
+    width: 1.2vw; height: 70%;
+    border: 1px solid #007804ad;
+    border-radius: 1vw;
+}
+section .main .scroll .mouse .roll{
+    width: 0.26vw; height: 0.7vw;
+    background-color: #0078047e;
+    border-radius: 1vw;
+    margin: 20% auto;
+}
+section .main .scroll>p{
+    width: 1.2vw;
+    margin-top: 15%;
+    font-size: 0.5vw;
+    color: #007804bd;
+}
+@keyframes mouseRoll{
+    0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+        top: 46vw;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+
+@keyframes rings{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 359deg;
+    }
+}
+/* -------------------main end------------------------- */
+/* -------------------profile start------------------------- */
+section .main .profile{
+    width: 100%; height: 45vw;
+    position: absolute;
+    left: 0; top: 1vw;
+    padding-top: 9.5vw;
+    z-index: -1;
+    display: none;
+}
+section .main  .profile .photo{
+    width: 50%; height: 30vw;
+    position: relative;
+    left: -10%; top: 0;
+    opacity: 0;
+}
+section .main  .profile .photo .circle_main{
+    width: 30vw; height: 30vw;
+    border: 1px solid #00780480;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/me.jpg);
+    position: absolute;
+    left: 50%; translate: -50%;
+    top: 5%;
+}
+section .main  .profile .photo .circle_1{
+    width: 30vw; height: 30vw;
+    background-color: #fff;
+    border: 1px solid #00780480;
+    border-radius: 50%;
+    position: absolute;
+    left: 17%; top: 2.9%;
+    z-index: -1;
+}
+section .main  .profile .photo .circle_2{
+    width: 30vw; height: 30vw;
+    background-color: #fff;
+    border: 1px solid #00780480;
+    border-radius: 50%;
+    position: absolute;
+    left: 22%; top: 7%;
+    z-index: -1;
+}
+section .main .profile .deco{
+    position: absolute;
+    top: 25%; right: 30%;
+    z-index: 1;
+    opacity: 0;
+}
+section .main .profile .deco .deco_1{
+    width: 11vw; height: 1vw;
+    border: 1px solid #00780480;
+    margin-top: 0;
+    background-color: #fff;
+}
+section .main .profile .deco .deco_2{
+    width: 9vw; height: 1vw;
+    border: 1px solid #00780480;
+    margin-top: 2%;
+    margin-left: 25%;
+    background-color: #fff;
+}
+section .main  .profile .box{
+    width: 50%; height: 30vw;
+    position: absolute;
+    right: 0; top: 0;
+    padding-top: 12.5vw;
+    padding-left: 5%;
+    line-height: 1.8vw;
+    opacity: 0;
+    z-index: 100;
+}
+section .main  .profile .box .profile_box>h3, section .profile .box .history_box>h3{
+    font-family: "Jua", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    color: #007803;
+    margin-bottom: 2%;
+}
+section .main  .profile .box .profile_box{
+    width: 60%; height: 12.5vw;
+    box-sizing: border-box;
+    border: 1px solid #007803;
+    background-color: #fff;
+    padding: 2.5%;
+    color: #007803;
+    font-size: 0.9vw;
+    font-weight: 400;
+}
+section .main  .profile .box .history_box{
+    width: 60%; height: 12.5vw;
+    box-sizing: border-box;
+    border: 1px solid #007803;
+    background-color: #fff;
+    padding: 2.5%;
+    margin-top: 5%;
+    color: #007803;
+    font-size: 0.9vw;
+    font-weight: 400;
+}
+section .main  .profile .box .history_box>ul>.nbsp{
+    margin-left: 17%;
+}
+/* ---------------profile end----------------- */
+/* ---------------skill strat----------------- */
+section .skill{
+    width: 90%; height: 45vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+}
+section .skill .skill_box>h3, section .skill .report_box>h3{
+    font-family: "Jua", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    color: #007803;
+}
+section .skill .skill_box{
+    width: 28%; height: 38vw;
+    padding: 3%;
+    padding-top: 10%;    
+    padding-left: 7%;
+    margin-left: 10%;
+}
+section .skill .skill_box>ul>li{
+    background-color: #ffffff;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 5px rgb(70, 70, 70);
+}
+section .skill .skill_box .skill_ic_1{
+    width: 75%; height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+section .skill .skill_box .skill_ic_1>li{
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+}
+section .skill .skill_box .skill_ic_2{
+    width: 75%; height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+section .skill .skill_box .skill_ic_2>li{
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+}
+section .skill .skill_box .skill_ic_3{
+    width: 75%; height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+section .skill .skill_box .skill_ic_3>li{
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+}
+section .skill .skill_box .skill_ic_4{
+    width: 48%; height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+section .skill .skill_box .skill_ic_4>li{
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+}
+
+section .skill .skill_box .skill_ic_1>li:nth-child(1){background-image: url(images/skill_html5.png);}
+section .skill .skill_box .skill_ic_1>li:nth-child(2){background-image: url(images/skill_skill_css3.png);}
+section .skill .skill_box .skill_ic_1>li:nth-child(3){background-image: url(images/skill_jquery.png);}
+section .skill .skill_box .skill_ic_2>li:nth-child(1){background-image: url(images/skill_javascript.png);}
+section .skill .skill_box .skill_ic_2>li:nth-child(2){background-image: url(images/skill_react.png);}
+section .skill .skill_box .skill_ic_2>li:nth-child(3){background-image: url(images/skill_figma.png);}
+section .skill .skill_box .skill_ic_3>li:nth-child(1){background-image: url(images/skill_photoshop.png);}
+section .skill .skill_box .skill_ic_3>li:nth-child(2){background-image: url(images/skill_illustrator.png);}
+section .skill .skill_box .skill_ic_3>li:nth-child(3){background-image: url(images/skill_vscode.png);}
+section .skill .skill_box .skill_ic_4>li:nth-child(1){background-image: url(images/skill_git.png);}
+section .skill .skill_box .skill_ic_4>li:nth-child(2){background-image: url(images/skill_github.png);}
+
+section .skill .report_box{
+    width: 50%; height: 38vw;
+    margin-left: 0%;
+    padding: 3%;
+    padding-top: 10%;
+}
+section .skill .report_box .report_acco{
+    width: 75%; 
+}
+section .skill .report_box .report_acco>li{
+    width: 100%; height: 5vw;
+    margin-top: 2.5%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+}
+section .skill .report_box .report_acco> li.all{
+    margin-top: 10%;
+    background-image: url(images/acco_renewal_pre.jpg);
+}
+section .skill .report_box .report_acco> li.kfv{
+    background-image: url(images/acco_kfv_pre.jpg);
+}
+section .skill .report_box .report_acco> li.green{
+    background-image: url(images/acco_green_pre.jpg);
+}
+section .skill .report_box .report_acco li:nth-child(1).acco_on{
+    height: 13vw;
+    background-image: url(images/acco_renewal.jpg);
+}
+section .skill .report_box .report_acco li:nth-child(2).acco_on{
+    height: 13vw;
+    background-image: url(images/acco_kfv.jpg);
+}
+section .skill .report_box .report_acco li:nth-child(3).acco_on{
+    height: 13vw;
+    background-image: url(images/acco_green.jpg);
+}
+section .skill .report_box .report_acco>li>a{
+    width: 3vw; height: 3vw;
+    display: block;
+    background-image: url(images/acco_project.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: absolute;
+    right: 0; top: 0vw;
+    transition: all 0.5s;
+    display: none;
+    /* background-color: #007803; */
+}
+section .skill .report_box .report_acco>li>a>h4{
+    font-size: 0.5vw;
+    padding-left: 0.95vw;
+    padding-top: 2.3vw;
+    color: #fff;
+    transition: all 0.5s;
+}
+section .skill .report_box .report_acco>li>a.folder{
+    display: block;
+}
+section .skill .report_box .report_acco>li>a:hover{
+    background-image: url(images/acco_project_green.png);
+}
+section .skill .report_box .report_acco>li>a:hover>h4{
+    color: #007803;
+}
+/* ---------------skill end----------------- */
+/* ---------------portfolio_1 start-------------- */
+section .portfolio_1{
+    width: 80%; height: 55vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 7%;
+}
+section .portfolio_1>h1{
+    font-family: "Jua", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    color: #007803;
+    margin-bottom: 4%;
+}
+section .portfolio_1 .btn_1{
+    display: flex;
+}
+section .portfolio_1 .btn_1>li{
+    font-family: "Jua", sans-serif;
+    font-weight: 300;
+    font-size: 0.8vw;
+    color: #007803;
+    padding: 0.3vw 0.8vw 0.2vw 0.8vw;
+    border: 1px solid  #007804;
+    background-color: #fff;
+    border-radius: 5vw;
+    margin-right: 1.5%;
+    cursor: pointer;
+    margin-bottom: 3%;
+}
+section .portfolio_1 .btn_1 .btn_on, section .portfolio_1 .btn_1>li:hover{
+    background-color: #007804c5;
+    color: #fff;
+}
+section .portfolio_1 .portfol_gr{
+    width: 100%;
+    display: flex;
+}
+section .portfolio_1 .portfol_gr .site_box{
+    width: 50%;
+    position: relative;
+}
+section .portfolio_1 .portfol_gr .site_box>div{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+section .portfolio_1 .portfol_gr .site_box .box_on{
+    display: block;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn>li:first-child{margin-top: 0;}
+
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn>li{
+    width: 132%; height: 120%;
+    position: absolute;
+    left: -18%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+/*  */
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn2{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn2>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn2>li:first-child{margin-top: 0;}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn2{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn2>li{
+    width: 132%; height: 120%;
+    position: absolute;
+    left: -18%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+/*  */
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn3{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn3>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn3>li:first-child{margin-top: 0;}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn3{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn3>li{
+    width: 132%; height: 120%;
+    position: absolute;
+    left: -18%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn>li.bn_on{display: block;}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn2>li.bn_on{display: block;}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn3>li.bn_on{display: block;}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_full{background-image: url(images/bn_samyang_full.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_web{background-image: url(images/bn_samyang_web.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_tab{background-image: url(images/bn_samyang_tab.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(1) .gr_bn .bn_mob{background-image: url(images/bn_samyang_mob.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_full2{background-image: url(images/bn_lala_full.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_web2{background-image: url(images/bn_lala_web.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_tab2{background-image: url(images/bn_lala_tab.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(2) .gr_bn2 .bn_mob2{background-image: url(images/bn_lala_mob.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_full3{background-image: url(images/bn_me_full.jpg);}
+section .portfolio_1 .portfol_gr .site_box>div:nth-child(3) .gr_bn3 .bn_web3{background-image: url(images/bn_me_web.jpg);}
+section .portfolio_1 .portfol_gr .site_txt1{
+    width: 35%;
+    margin-left: 4%;
+    position: relative;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_title{
+    font-size: 1.2vw;
+    color: rgb(70, 70, 70);
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_intro{
+    font-size: 1vw;
+    color: rgb(70, 70, 70);
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li{
+    font-size: 1vw;
+    color: rgb(70, 70, 70);
+    font-weight: 200;
+    margin-bottom: 2.5%;
+    letter-spacing: 1px;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li span{
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .indent{
+    margin-left: 12%;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li:last-child{
+    height: 3vw;
+    padding-top: 0.5vw;
+    display: flex;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li>div{
+    width: 2vw; height: 2vw;
+    margin-top: -0.25vw;
+    margin-left: 1.2%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .samyang_1{
+    background-color: #ff6700;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .samyang_2{
+    background-color: #d4c1b0;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .lala_1{
+    background-color: #9DC9EE;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .lala_2{
+    background-color: #FFD1D7;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .lala_3{
+    background-color: #E2CBAB;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .lala_4{
+    background-color: #A97F67;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .my_1{
+    background-color: #369339;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li .my_2{
+    background-color: #eeeeee;
+    border: 1px solid rgba(128, 128, 128, 0.39);
+}
+section .portfolio_1 .portfol_gr .site_txt1 .txt_on{display: block;}
+section .portfolio_1 .portfol_gr .site_txt1>div .website{
+    width: 7vw;
+    position: absolute;
+    right: 15%; bottom: 5%;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website a{
+    width: 10vw;
+    display: flex;
+    /* background-color: #007804; */
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a h5{
+    color: rgb(70, 70, 70);
+    font-size: 0.8vw;
+    transition: all 0.5s;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow{
+    width: 1vw; height: 1vw;
+    transition: all 0.3s;
+    display: flex;
+    position: relative;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow .arrow_line{
+    width: 1vw; height: 2px;
+    margin-left: 20%;
+    margin-top: 0.6vw;
+    background-color:  rgb(70, 70, 70);
+    transition: all 0.3s;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow .arrow_box{
+    width: 5px; height: 5px;
+    margin-top: 0.5vw;
+    margin-left: -0.4vw;
+    border-top: 2px solid rgb(70, 70, 70);
+    border-right: 2px solid rgb(70, 70, 70);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    transition: all 0.3s;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover h5{
+    color: #007803;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover .arrow{
+    width: 4vw;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover .arrow .arrow_line{
+    width: 5vw; height: 2px;
+    background-color: #007803;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover .arrow_box{border-color: #007803;}
+/* ---------------portfolio_1 end-------------- */
+/* ---------------portfolio_2 start-------------- */
+section .portfolio_2{
+    width: 80%; height: 50vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 7%;
+}
+section .portfolio_2>h1{
+    font-family: "Jua", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    color: #007803;
+    margin-bottom: 4%;
+}
+section .portfolio_2 .btn_2{
+    display: flex;
+}
+section .portfolio_2 .btn_2>li{
+    font-family: "Jua", sans-serif;
+    font-weight: 300;
+    font-size: 0.8vw;
+    color: #007803;
+    padding: 0.3vw 0.8vw 0.2vw 0.8vw;
+    border: 1px solid  #007804;
+    background-color: #fff;
+    border-radius: 5vw;
+    margin-right: 1.5%;
+    cursor: pointer;
+    margin-bottom: 3%;
+}
+section .portfolio_2 .btn_2 .btn_on, section .portfolio_2 .btn_2>li:hover{
+    background-color: #007804c5;
+    color: #fff;
+}
+section .portfolio_2 .portfol_gr{
+    width: 100%;
+    display: flex;
+}
+section .portfolio_2 .portfol_gr .site_box2{
+    width: 50%;
+    position: relative;
+}
+section .portfolio_2 .portfol_gr .site_box2>div{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+section .portfolio_2 .portfol_gr .site_box2 .box_on{
+    display: block;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4>li:first-child{margin-top: 0;}
+
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4>li{
+    width: 132%; height: 120%;
+    position: absolute;
+    left: -16%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+/*  */
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5>li:first-child{margin-top: 0;}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5>li{
+    width: 132%; height: 120%;
+    position: absolute;
+    left: -16%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5>li:nth-child(3){left: -21.5%;}
+/*  */
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4>li.bn_on{display: block;}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5>li.bn_on{display: block;}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(1) .gr_bn4 .bn_full4{background-image: url(images/bn_kfv_full.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(1) .gr_bn4 .bn_web4{background-image: url(images/bn_kfv_web.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_full5{background-image: url(images/bn_green_full.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_web5{background-image: url(images/bn_green_web.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_tab5{background-image: url(images/bn_green_tab.jpg);}
+section .portfolio_2 .portfol_gr .site_box2>div:nth-child(2) .gr_bn5 .bn_mob5{background-image: url(images/bn_green_mob.jpg);}
+
+section .portfolio_2 .portfol_gr .site_txt2{
+    width: 50%;
+    margin-left: 5%;
+    position: relative;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_title{
+    font-size: 1.2vw;
+    color: rgb(70, 70, 70);
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_intro{
+    font-size: 1vw;
+    color: rgb(70, 70, 70);
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li{
+    font-size: 1vw;
+    color: rgb(70, 70, 70);
+    font-weight: 200;
+    margin-bottom: 2.5%;
+    letter-spacing: 1px;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li span{
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .indent{
+    margin-left: 12%;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li:last-child{
+    height: 3vw;
+    padding-top: 0.5vw;
+    display: flex;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li>div{
+    width: 2vw; height: 2vw;
+    margin-top: -0.25vw;
+    margin-left: 1.2%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .kfv_1{
+    background-color: #f9784d;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .kfv_2{
+    background-color: #e6a52b;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .kfv_3{
+    background-color: #e6e3d7;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .kfv_3{
+    background-color: #d4c1b0;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .green_1{
+    background-color: #0D6D53;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .green_2{
+    background-color: #3AA065;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li .green_3{
+    background-color: #FFFAF0;
+}
+section .portfolio_2 .portfol_gr .site_txt2 .txt_on{display: block;}
+section .portfolio_2 .portfol_gr .site_txt2>div .website{
+    width: 7vw;
+    position: absolute;
+    right: 15%; bottom: 5%;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website a{
+    width: 10vw;
+    display: flex;
+    /* background-color: #007804; */
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a h5{
+    color: rgb(70, 70, 70);
+    font-size: 0.8vw;
+    transition: all 0.5s;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow{
+    width: 1vw; height: 1vw;
+    transition: all 0.3s;
+    display: flex;
+    position: relative;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow .arrow_line{
+    width: 1vw; height: 2px;
+    margin-left: 20%;
+    margin-top: 0.6vw;
+    background-color:  rgb(70, 70, 70);
+    transition: all 0.3s;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow .arrow_box{
+    width: 5px; height: 5px;
+    margin-top: 0.5vw;
+    margin-left: -0.4vw;
+    border-top: 2px solid rgb(70, 70, 70);
+    border-right: 2px solid rgb(70, 70, 70);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    transition: all 0.3s;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover h5{
+    color: #007803;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover .arrow{
+    width: 4vw;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover .arrow .arrow_line{
+    width: 5vw;
+    background-color: #007803;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover .arrow_box{border-color: #007803;}
+/* ---------------portfolio_2 end-------------- */
+/* ---------------portfolio_3 start-------------- */
+section .portfolio_3{
+    width: 80%; height: 50vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 7%;
+}
+section .portfolio_3>h1{
+    font-family: "Jua", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    color: #007803;
+    margin-bottom: 4%;
+}
+section .portfolio_3 .btn_3{
+    display: flex;
+}
+section .portfolio_3 .btn_3>li{
+    font-family: "Jua", sans-serif;
+    font-weight: 300;
+    font-size: 0.8vw;
+    color: #007803;
+    padding: 0.3vw 0.8vw 0.2vw 0.8vw;
+    border: 1px solid  #007804;
+    background-color: #fff;
+    border-radius: 5vw;
+    margin-right: 1.5%;
+    cursor: pointer;
+    margin-bottom: 3%;
+}
+section .portfolio_3 .btn_3 .btn_on, section .portfolio_3 .btn_3>li:hover{
+    background-color: #007804c5;
+    color: #fff;
+}
+section .portfolio_3 .portfol_gr{
+    width: 100%;
+    display: flex;
+}
+section .portfolio_3 .portfol_gr .site_box3{
+    width: 50%;
+    position: relative;
+}
+section .portfolio_3 .portfol_gr .site_box3>div{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+section .portfolio_3 .portfol_gr .site_box3 .box_on{
+    display: block;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6>li:first-child{margin-top: 0;}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn6{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn6>li{
+    width: 118%; height: 120%;
+    position: absolute;
+    left: -10%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+/*  */
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7>li:first-child{margin-top: 0;}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn7{
+    width: 85%; height: 28vw;
+    border: 1px solid  #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn7>li{
+    width: 118%; height: 120%;
+    position: absolute;
+    left: -10%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+/*  */
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8{
+    width: 3.5vw;
+    position: absolute;
+    left: 1%; top: 0;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8>li{
+    width: 3.5vw; height: 3.5vw;
+    border: 1px solid #afafafc5;
+    border-radius: 0.5vw;
+    margin-top: 15%;
+    cursor: pointer;
+    background-color: #00770436;
+    transition: background-color 0.5s ease;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8>li:first-child{margin-top: 0;}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8{
+    width: 85%; height: 28vw;
+    border: 1px solid #afafafc5;
+    position: relative;
+    left: 5vw; top: 0;
+    overflow: hidden;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8>li{
+    width: 118%; height: 120%;
+    position: absolute;
+    left: -10%; top: 0;
+    background-color: #fff;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+/*  */
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn6>li.bn_on{display: block;}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn7>li.bn_on{display: block;}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8>li.bn_on{display: block;}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(1) .gr_bn6 .bn_full6{background-image: url(images/bn_cu_full.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(1) .gr_bn6 .bn_web6{background-image: url(images/bn_cu_web.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(2) .gr_bn7 .bn_full7{background-image: url(images/bn_dorco_full.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(2) .gr_bn7 .bn_web7{background-image: url(images/bn_dorco_web.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(3) .gr_bn8 .bn_full8{background-image: url(images/bn_selecto_full.jpg);}
+section .portfolio_3 .portfol_gr .site_box3>div:nth-child(3) .gr_bn8 .bn_web8{background-image: url(images/bn_selecto_web.jpg);}
+
+section .portfolio_3 .portfol_gr .site_txt3{
+    width: 50%;
+    margin-left: 5%;
+    position: relative;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_title{
+    font-size: 1.2vw;
+    color: rgb(70, 70, 70);
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_intro{
+    font-size: 1vw;
+    color: rgb(70, 70, 70);
+    font-weight: 400;
+    margin-bottom: 10%;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li{
+    font-size: 1vw;
+    color: rgb(70, 70, 70);
+    font-weight: 200;
+    margin-bottom: 2.5%;
+    letter-spacing: 1px;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .indent{
+    margin-left: 12%;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li:last-child{
+    height: 3vw;
+    padding-top: 0.5vw;
+    display: flex;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li>div{
+    width: 2vw; height: 2vw;
+    margin-top: -0.25vw;
+    margin-left: 1.2%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .cu_1{
+    background-color: #6837f8;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .cu_2{
+    background-color: #37d243;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .cu_3{
+    background-color: #ceeef8;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .dorco_1{
+    background-color: #CFE942;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .dorco_2{
+    background-color: #231F20;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .selecto_1{
+    background-color: #ff4713;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li .selecto_2{
+    background-color: #f15e2b;
+}
+section .portfolio_3 .portfol_gr .site_txt3 .txt_on{display: block;}
+section .portfolio_3 .portfol_gr .site_txt3>div .website{
+    width: 7vw;
+    position: absolute;
+    right: 15%; bottom: 5%;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a{
+    width: 10vw;
+    display: flex;
+    /* background-color: #007804; */
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a h5{
+    color: rgb(70, 70, 70);
+    font-size: 0.8vw;
+    transition: all 0.5s;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow{
+    width: 1vw; height: 1vw;
+    transition: all 0.3s;
+    display: flex;
+    position: relative;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow .arrow_line{
+    width: 1vw; height: 2px;
+    margin-left: 20%;
+    margin-top: 0.6vw;
+    background-color:  rgb(70, 70, 70);
+    transition: all 0.3s;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow .arrow_box{
+    width: 5px; height: 5px;
+    margin-top: 0.5vw;
+    margin-left: -0.4vw;
+    border-top: 2px solid rgb(70, 70, 70);
+    border-right: 2px solid rgb(70, 70, 70);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    transition: all 0.3s;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover h5{
+    color: #007803;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover .arrow{
+    width: 4vw;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover .arrow .arrow_line{
+    width: 5vw;
+    background-color: #007803;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover .arrow_box{border-color: #007803;}
+/* ---------------portfolio_3 end-------------- */
+
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn>li img,
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn2>li img,
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn3>li img,
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4>li img,
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5>li img,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6>li img,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7>li img,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8>li img{
+    width: 2.5vw; height: 2.5vw;
+    margin-left: 50%; margin-top: 50%;
+    translate: -50% -50%;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn>li:hover{
+    background-color: #fff;
+    outline: 2px solid #0D6D53;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn>li:hover img{
+    filter: invert(32%) sepia(49%) saturate(702%) hue-rotate(113deg) brightness(42%) contrast(92%);
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn>li.cover,
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn2>li.cover,
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn3>li.cover,
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4>li.cover,
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5>li.cover,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6>li.cover,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7>li.cover,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8>li.cover
+{
+    background-color: #fff;
+    outline: 2px solid #0D6D53;
+}
+.cover>img{
+    filter: invert(32%) sepia(49%) saturate(702%) hue-rotate(113deg) brightness(42%) contrast(92%);
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website .arrow .arrow_line{
+    width: 2vw; height: 1px;
+    background-color: #231F20;
+}
+
+
+/* ----------------contact start------------- */
+section .contact{
+    width: 100%; height: 45vw;
+    position: relative;
+}
+section .contact .contact_gr{
+    width: 24%; height: 25vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    position: relative;
+}
+section .contact .contact_gr .contact_box{
+    width: 100%; height: 25vw;
+    border-radius: 11vw 11vw 0 0;
+    background-color: #fff;
+    border: 2px solid #007803;
+    position: absolute;
+    left: 0; top: 0;
+    text-align: center;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-out;
+    transform: rotateY(0deg);
+}
+section .contact .contact_gr  .contact_box>h1{
+    font-family: "Jua", sans-serif;
+    font-weight: 500;
+    margin-top: 12%;
+    color: #007803;
+    font-size: 1.5vw;
+    margin-bottom: 10%;
+}
+section .contact .contact_gr  .contact_box>h4{
+    font-size: 0.8vw;
+    line-height: 1.5vw;
+    font-weight: 300;
+    margin-bottom: 12%;
+}
+section .contact .contact_gr  .contact_box .contact_cont{
+    width: 70%;
+    margin-left: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+section .contact .contact_gr  .contact_box .contact_cont .contact_img{
+    width: 8vw; height: 8vw;
+    background-image: url(images/contact_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call{
+    width: 45%;
+    margin-top: 5%;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call>li{
+    text-align: left;
+    font-size: 0.8vw;
+    font-weight: 300;
+    margin-top: 12%;
+    padding: 0.1vw;
+    padding-left: 1.6vw;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call>li:nth-child(1){
+    background-image: url(images/contact_mob.png);
+}
+section .contact .contact_gr  .contact_box .contact_cont .call>li:nth-child(2){
+    background-image: url(images/contact_mail.png);
+    background-size: 15%;
+    background-position-x: 2.5%;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call>li:nth-child(3){
+    background-image: url(images/contact_kakao.png);
+}
+section .contact .contact_gr  .contact_box:hover{
+    box-shadow: 0px 0px 20px #249828;
+}
+
+section .contact .contact_gr  .contact_behind{
+    width: 100%; height: 25vw;
+    border-radius: 11vw 11vw 0 0;
+    background-color: #249828e1;
+    border: 2px solid #007803;
+    color: #fff;
+    position: absolute;
+    left: 0; top: 0;
+    text-align: center;
+    cursor: pointer;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    transition: all 0.3s;
+}
+section .contact .contact_gr  .contact_behind h1{
+    font-family: "Jua", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-top: 30%;
+}
+section .contact .contact_gr  .contact_behind h2{
+    font-family: "Jua", sans-serif;
+    font-size: 1.5vw;
+    margin-top: 12%;
+    font-weight: 300;
+}
+section .contact .contact_gr  .contact_behind h2 span{font-size: 1.2vw;}
+section .contact .contact_gr .contact_behind .call2{
+    width: 80%;
+    margin: 20% auto;
+    display: flex;
+    justify-content: space-between;
+}
+section .contact .contact_gr .cont_hide{
+    transform: rotateY(180deg);
+    backface-visibility: hidden; 
+}
+section .contact .contact_gr  .cont_show{
+    backface-visibility: visible;
+    transform: rotateY(0deg);
+}
+section .contact .call2 li{
+    font-weight: 300;
+    font-size: 0.8vw;
+    padding-left: 1.3vw;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(100);
+}
+section .contact .call2 li:nth-child(1){background-image: url(images/contact_mob.png);}
+section .contact .call2 li:nth-child(2){
+    background-image: url(images/contact_mail.png);
+    background-size: 12%;
+    padding-left: 1.5vw;
+}
+section .contact .contact_shadow{
+    width: 24%; height: 25vw;
+    border-radius: 11vw 11vw 0 0;
+    background-color: #249828c5;
+    border: 2px solid #007803;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -45% -45%;
+    text-align: center;
+    z-index: -1;
+}
+section .contact .cont_shadow{background: #fff;}
+section .contact>p{
+    font-family: "Jua", sans-serif;
+    font-size: 1.2vw;
+    color: #007803;
+    font-weight: 500;
+    position: absolute;
+    z-index: -1;
+    left: 28.5%; top: 35%;
+}
+section .contact>p:last-child{
+    left: 48.5%; top: 70%;
+}
+/* ----------------contact end------------- */
+/* ----------------footer start------------------ */
+footer{
+    width: 100%; height: 5vw;
+    border-top: 1px solid rgba(128, 128, 128, 0.384);
+    text-align: center;
+}
+footer>h1{
+    font-size: 0.8vw;
+    font-weight: 200;
+    margin-top: 2vw;
+}
+
+/* -------------------------반응형--------------------------------- */
+@media all and (min-width : 769px) and (max-width :1280px){
+    section .side_menu{display: none;}
+    /* -------------side menu end------------------ */
+    /* -------------skill start------------------ */
+    section .skill {
+        height: 70vw;
+        flex-wrap: wrap;
+        padding-top: 5%;
+    }
+    section .skill .skill_box{
+        width: 68%; height: 10vw;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-left: 13%;
+    }
+    section .skill .skill_box>h3,
+    section .skill .report_box>h3{
+        position: absolute;
+        font-size: 2.3vw;
+    }
+    section .skill .skill_box .skill_ic_1,
+    section .skill .skill_box .skill_ic_2,
+    section .skill .skill_box .skill_ic_3
+    {
+        margin-top: 5vw;
+        margin-right: 1.5%;
+    }
+    section .skill .skill_box .skill_ic_4{margin-top: 5vw;}
+    section .skill .skill_box .skill_ic_1>li,
+    section .skill .skill_box .skill_ic_2>li,
+    section .skill .skill_box .skill_ic_3>li,
+    section .skill .skill_box .skill_ic_4>li{
+        width: 4.5vw; height: 4.5vw;
+    }
+    section .skill .report_box{
+        width: 68%;
+        margin-left: 13%;
+        padding: 0;
+    }
+    section .skill .report_box .report_acco{
+        width: 100%;
+    }
+    section .skill .report_box .report_acco>li{
+        height: 8vw;
+    }
+    section .skill .report_box .report_acco>li>a{
+        width: 5vw; height: 5vw;
+    }
+    section .skill .report_box .report_acco>li>a>h4{
+        font-size: 1vw;
+        padding-left: 1.35vw;
+        padding-top: 3.5vw;
+    }
+    section .skill .report_box .report_acco li:nth-child(1).acco_on{height: 20vw;}
+    section .skill .report_box .report_acco li:nth-child(2).acco_on{height: 20vw;}
+    section .skill .report_box .report_acco li:nth-child(3).acco_on{height: 20vw;}
+/* -------------------skill end------------------------- */
+/* -------------------portfolio_1 start------------------------- */
+section .portfolio_1>h1{font-size: 2.3vw;}
+section .portfolio_1 .btn_1>li{
+    font-size: 1.5vw;
+    margin-right: 2.5%;
+    margin-bottom: 5%;
+}
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn,
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn2,
+section .portfolio_1 .portfol_gr .site_box>div .gr_btn3{display: none;}
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn,
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn2,
+section .portfolio_1 .portfol_gr .site_box>div .gr_bn3{
+    width: 100%; height: 32vw;
+    left: 0;
+}
+section .portfolio_1 .portfol_gr .site_txt1{width: 50%;}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_title{
+    font-size: 2vw;
+    margin-top: 3%;
+    margin-bottom: 3.5%;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_intro{
+    font-size: 1.5vw;
+    margin-bottom: 5%;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li{
+    font-size: 1.5vw;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li>div{
+    margin-top: 0.25vw;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website{
+    right: 0; bottom: 5%;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website a::after{
+    content: "";
+    display: block;
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+    border: 1px solid #007803;
+    position: absolute;
+    top: -130%; left: -4.5%;
+    display: none;
+}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a h5{font-size: 1vw;}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow{display: none;}
+section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover::after{display: block;}
+/* -------------------portfolio_1 end------------------------- */
+/* -------------------portfolio_2 start--------------------- */
+section .portfolio_2>h1{font-size: 2.3vw;}
+section .portfolio_2 .btn_2>li{
+    font-size: 1.5vw;
+    margin-right: 2.5%;
+    margin-bottom: 5%;
+}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4,
+section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5{display: none;}
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4,
+section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5{
+    width: 100%; height: 32vw;
+    left: 0;
+}
+section .portfolio_2 .portfol_gr .site_txt2{width: 50%;}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_title{
+    font-size: 2vw;
+    margin-top: 3%;
+    margin-bottom: 3.5%;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_intro{
+    font-size: 1.5vw;
+    margin-bottom: 5%;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li{
+    font-size: 1.5vw;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li>div{
+    margin-top: 0.25vw;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website{
+    right: 0; bottom: 5%;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website a::after{
+    content: "";
+    display: block;
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+    border: 1px solid #007803;
+    position: absolute;
+    top: -130%; left: -4.5%;
+    display: none;
+}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a h5{font-size: 1vw;}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow{display: none;}
+section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover::after{display: block;}
+/* -------------------portfolio_2 end--------------------- */
+/* -------------------portfolio_3 start--------------------- */
+section .portfolio_3>h1{font-size: 2.3vw;}
+section .portfolio_3 .btn_3>li{
+    font-size: 1.5vw;
+    margin-right: 2.5%;
+    margin-bottom: 5%;
+}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8{display: none;}
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn6,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn7,
+section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8{
+    width: 100%; height: 32vw;
+    left: 0;
+}
+section .portfolio_3 .portfol_gr .site_txt3{width: 50%;}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_title{
+    font-size: 2vw;
+    margin-top: 3%;
+    margin-bottom: 3.5%;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_intro{
+    font-size: 1.5vw;
+    margin-bottom: 5%;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li{
+    font-size: 1.5vw;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li>div{
+    margin-top: 0.25vw;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website{
+    right: 0; bottom: 7%;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website a::after{
+    content: "";
+    display: block;
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+    border: 1px solid #007803;
+    position: absolute;
+    top: -130%; left: -4.5%;
+    display: none;
+}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a h5{font-size: 1vw;}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow{display: none;}
+section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover::after{display: block;}
+/* -------------------portfolio_3 end--------------------- */
+/* -------------------contact start--------------------- */
+section .contact{height: 55vw;}
+section .contact .contact_gr{
+    width: 30%; height: 35vw;
+}
+section .contact .contact_gr .contact_box{
+    height: 35vw;
+    border-radius: 20vw 20vw 0 0;
+}
+section .contact .contact_gr  .contact_box>h1{
+    font-size: 2vw;
+    margin-top: 20%;
+}
+section .contact .contact_gr  .contact_box>h4{
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+}
+section .contact .contact_gr  .contact_box .contact_cont{margin-left: 8%;}
+section .contact .contact_gr  .contact_box .contact_cont .contact_img{
+    width: 10vw; height: 10vw;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call{
+    width: 50%;
+    margin-left: 10%;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call>li{
+    font-size: 1.3vw;
+    margin-top: 10%;
+    padding-left: 2.2vw;
+}
+section .contact .contact_gr  .contact_behind{
+    height: 35vw;
+    border-radius: 20vw 20vw 0 0;
+}
+section .contact .contact_gr  .contact_behind h1{font-size: 2vw;}
+section .contact .contact_gr  .contact_behind h2{font-size: 2vw;}
+section .contact .contact_gr  .contact_behind h2 span{font-size: 1.5vw;}
+section .contact .call2 li{
+    font-size: 1.2vw;
+    padding-left: 1.8vw;
+}
+section .contact .call2 li:nth-child(2){padding-left: 2.1vw;}
+section .contact .contact_shadow{
+    width: 30%; height: 35vw;
+    border-radius: 20vw 20vw 0 0;
+}
+section .contact>p{
+    font-size: 2vw;
+    left: 18.5%;
+}
+section .contact>p:last-child{left: 44.5%;}
+/* -------------------contact end--------------------- */
+}    
+/* ------------------------반응형 제작 예정--------------------------------- */
+/* ---------------------------mob ver.------------------------------ */
+@media all and (max-width: 768px){
+    section .side_menu{display: none;}
+}
+/* ------------------------ mob ver. 사이드메뉴 삭제--------------------------------- */
