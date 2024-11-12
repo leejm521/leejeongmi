@@ -291,7 +291,7 @@ section .main  .profile .box{
     opacity: 0;
     z-index: 100;
 }
-section .main  .profile .box .profile_box>h3, section .profile .box .history_box>h3{
+section .main  .profile .box .profile_box>h3, section .main .profile .box .history_box>h3{
     font-family: "Jua", sans-serif;
     font-size: 1.4vw;
     font-weight: 400;
@@ -1523,6 +1523,34 @@ footer>h1{
 @media all and (min-width : 769px) and (max-width :1280px){
     section .side_menu{display: none;}
     /* -------------side menu end------------------ */
+    /* --------------profile start---------------- */
+    section .main  .profile .photo .circle_main{
+        background-size: 200%;
+        background-position-y: 40%;
+    }
+    section .main  .profile .box{
+        line-height: 2.2vw;
+        padding-top: 11vw;
+    }
+    section .main  .profile .box .profile_box>h3, section .main .profile .box .history_box>h3{
+        font-size: 2vw;
+        margin-bottom: 3.5%;
+    }
+    section .main  .profile .box .profile_box{
+        width: 70%;
+        height: 14.5vw;
+        font-size: 1.4vw;
+        margin-bottom: -2%;
+    }
+    section .main .profile .box .history_box{
+        width: 70%;
+        height: 15vw;
+        font-size: 1.4vw;
+    }
+    section .main  .profile .box .history_box>ul>.nbsp{
+        margin-left: 22%;
+    }
+    /* --------------profile end---------------- */
     /* -------------skill start------------------ */
     section .skill {
         height: 70vw;
