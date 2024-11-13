@@ -133,6 +133,7 @@ section .side_menu>li>a>.bar .ball_on{
 }
 /* ---------------side_menu end--------------------- */
 /* ----------------main start----------------- */
+section .main_mob{display: none;}
 section .main{
     width: 100%; height: 50vw;
     position: relative;
@@ -1803,10 +1804,156 @@ section .contact>p{
 }
 section .contact>p:last-child{left: 44.5%;}
 /* -------------------contact end--------------------- */
-}    
-/* ------------------------반응형 제작 예정--------------------------------- */
+}
 /* ---------------------------mob ver.------------------------------ */
 @media all and (max-width: 768px){
+    header{height: 10vw;}
+    header h1{
+        margin-top: 3vw;
+        font-size: 3vw;
+    }
+    /* ---------header end----------------- */
+    .cursor{width: 5.5vw; height: 5.5vw;}
+    .cursor p{
+        font-size: 1.5vw;
+        font-weight: 500;
+        margin-top: 1.5vw;
+    }
+    /* -------------side_menu start-------------- */
     section .side_menu{display: none;}
+    /* ---------side_menu end----------------- */
+    /* ---------main_mob strat----------------- */
+    section .main{display: none;}
+    section .main_mob{
+        display: block;
+        width: 100%; height: 80vw;
+    }
+    section .main_mob .ticket_mob{
+        width: 80%; height: 26.2vw;
+        display: flex;
+        position: absolute;
+        left: 13%; top: 30vw;
+        z-index: 100;
+        cursor: pointer;
+    }
+    section .main_mob .ticket_mob .tic_mob1{width: 70%;}
+    section .main_mob .ticket_mob .tic_mob1 img{height: 100%;}
+    section .main_mob .ticket_mob .tic_mob2{width: 30%; margin-left: -0.36%;}
+    section .main_mob .ticket_mob .tic_mob2 img{height: 100%;}
+    section .main_mob .ticket_mob:hover .tic_mob1{filter: brightness(90%);}
+    section .main_mob .ticket_mob:hover .tic_mob2{filter: brightness(90%);}
+
+    section .main_mob .image{
+        width: 90%; height: 80vw;
+        margin: 0 auto;
+        border: 1px solid #ffffff00;
+        transition: all 0.8s;
+        display: none;
+        cursor: pointer;
+    }
+    section .main_mob .image .image_main{
+        width: 55vw; height: 55vw;
+        border: 1px solid #00780476;
+        background-position: 48% 40%;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-image: url(images/me.jpg);
+        position: absolute;
+        top: 17vw;
+        left: 20%;
+    }
+    section .main_mob .image:hover .image_main{z-index: -1;}
+    section .main_mob .image .image_txt{
+        width: 55vw; height: 55vw;
+        border: 1px solid #00780476;
+        background-color: #fff;
+        margin-top: 20vw;
+        margin-left: 21%;
+    }
+    section .main_mob .image .image_txt .profile_mob{
+        width: 85%;
+        margin-left: 5%;
+    }
+    section .main_mob .image .image_txt .profile_mob h3{
+        color: #007803;
+        font-size: 3vw;
+        padding-top: 5%;
+        padding-bottom: 1vw;
+    }
+    section .main_mob .image .image_txt .profile_mob .mob_title{padding-top: 5vw;}
+    section .main_mob .image .image_txt .profile_mob>ul>li{
+        font-size: 2.3vw;
+        margin-top: 1vw;
+        font-weight: 400;
+    }
+    section .main_mob .image .image_txt .profile_mob>ul>li.nbsp{
+        padding-left: 24%;
+    }
+    /* ---------main_mob end----------------- */
+    /* -------------skill start------------------ */
+    section .skill {
+        height: 120vw;
+        flex-wrap: wrap;
+        padding-top: 15%;
+    }
+    section .skill .skill_box{
+        width: 80%; height: 10vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        margin-left: 13%;
+    }
+    section .skill .skill_box>h3,
+    section .skill .report_box>h3{
+        position: absolute;
+        font-size: 3vw;
+    }
+    section .skill .skill_box .skill_ic_1,
+    section .skill .skill_box .skill_ic_2{
+        width: 45%;
+        margin-top: 5vw;
+        margin-right: 5%;
+    }
+    section .skill .skill_box .skill_ic_3{
+        width: 45%;
+        margin-top: 8vw;
+        margin-right: 5%;
+    }
+    section .skill .skill_box .skill_ic_4{
+        width: 29%;
+        margin-top: 8vw;
+    }
+    section .skill .skill_box .skill_ic_1>li,
+    section .skill .skill_box .skill_ic_2>li,
+    section .skill .skill_box .skill_ic_3>li,
+    section .skill .skill_box .skill_ic_4>li{
+        width: 8.5vw; height: 8.5vw;
+    }
+    section .skill .report_box{
+        width: 80%;
+        padding-top: 5vw;
+        margin-left: 10%;
+    }
+    section .skill .report_box .report_acco{
+        width: 100%;
+    }
+    section .skill .report_box .report_acco>li{
+        height: 12vw;
+    }
+    section .skill .report_box .report_acco>li>a{
+        width: 10vw; height: 10vw;
+    }
+    section .skill .report_box .report_acco>li>a>h4{
+        font-size: 2.5vw;
+        font-weight: 400;
+        padding-left: 2.3vw;
+        padding-top: 7vw;
+    }
+    section .skill .report_box .report_acco li:nth-child(1).acco_on{height: 30vw;}
+    section .skill .report_box .report_acco li:nth-child(2).acco_on{height: 30vw;}
+    section .skill .report_box .report_acco li:nth-child(3).acco_on{height: 30vw;}
+    /* -------------skill end------------------ */
 }
 /* ------------------------ mob ver. 사이드메뉴 삭제--------------------------------- */

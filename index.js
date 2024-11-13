@@ -259,5 +259,15 @@ $(document).ready(function(){
         $(".contact_shadow").stop().toggleClass("cont_shadow");
     });
 
+// mob ver
+
+    $(".ticket_mob>div").hover(function(){
+        $(".cursor").toggle();
+    });
+
+    $(".ticket_mob").click(function(){
+        $(".ticket_mob").stop().fadeOut();
+        $(".image").stop().fadeIn();
+    });
 });
 
