@@ -19,6 +19,7 @@ header{
     display: flex;
     justify-content: space-between;
     position: fixed;
+    left: 0; top: 0;
     background-color: #fffefeb7;
     z-index: 100;
 }
@@ -63,6 +64,7 @@ header h1{
 /* --------------------section start------------------------ */
 section{
     width: 100%;
+    overflow: hidden;
 }
 /* ---------------side_menu start--------------------- */
 section .side_menu{
@@ -476,6 +478,9 @@ section .skill .report_box .report_acco>li>a:hover>h4{
     color: #007803;
 }
 /* ---------------skill end----------------- */
+section .portfolio_1 .site_box>div .site_link,
+section .portfolio_2 .site_box2>div .site_link,
+section .portfolio_3 .site_box3>div .site_link{display: none;}
 /* ---------------portfolio_1 start-------------- */
 section .portfolio_1{
     width: 80%; height: 55vw;
@@ -1827,6 +1832,7 @@ section .contact>p:last-child{left: 44.5%;}
     section .main_mob{
         display: block;
         width: 100%; height: 80vw;
+        position: relative;
     }
     section .main_mob .ticket_mob{
         width: 80%; height: 26.2vw;
@@ -1846,10 +1852,10 @@ section .contact>p:last-child{left: 44.5%;}
     section .main_mob .image{
         width: 90%; height: 80vw;
         margin: 0 auto;
-        border: 1px solid #ffffff00;
         transition: all 0.8s;
         display: none;
         cursor: pointer;
+        position: relative;
     }
     section .main_mob .image .image_main{
         width: 55vw; height: 55vw;
@@ -1859,7 +1865,7 @@ section .contact>p:last-child{left: 44.5%;}
         background-size: 200%;
         background-image: url(images/me.jpg);
         position: absolute;
-        top: 17vw;
+        top: 18vw;
         left: 20%;
     }
     /* section .main_mob .image:hover .image_main{z-index: -1;} */
@@ -1867,11 +1873,10 @@ section .contact>p:last-child{left: 44.5%;}
         width: 55vw; height: 55vw;
         border: 1px solid #00780476;
         background-color: #fff;
-        margin-top: 20vw;
-        margin-left: 21%;
         position: relative;
+        top: 20vw;
+        left: 22%;
         z-index: -1;
-        transition: all 0.5s;
     }
     section .main_mob .image .image_txt .profile_mob{
         width: 85%;
@@ -1886,13 +1891,31 @@ section .contact>p:last-child{left: 44.5%;}
     section .main_mob .image .image_txt .profile_mob .mob_title{padding-top: 3vw;}
     section .main_mob .image .image_txt .profile_mob>ul>li{
         font-size: 2.3vw;
-        margin-top: 1vw;
+        margin-top: 0.6vw;
         font-weight: 400;
     }
     section .main_mob .image .image_txt .profile_mob>ul>li.nbsp{
         padding-left: 24%;
     }
     /* ---------main_mob end----------------- */
+    section .line_mob{
+        width: 0%; height: 1px;
+        margin-top: 3.5vw;
+        background-color: #0077049d;
+        transition: all 1.5s;
+        position: relative;
+        margin-left: 5%;
+    }
+    section .line_mob .ring_mob{
+        width: 20vw; height: 20vw;
+        background-image: url(images/txt_ring.png);
+        background-size: cover;
+        position: absolute;
+        top: -10vw; right: -8.5vw;
+        transition: all 1.5s;
+        animation: rings 4s linear infinite;
+        display: none;
+    }
     /* -------------skill start------------------ */
     section .skill {
         height: 120vw;
@@ -1911,7 +1934,7 @@ section .contact>p:last-child{left: 44.5%;}
     section .skill .skill_box>h3,
     section .skill .report_box>h3{
         position: absolute;
-        font-size: 3vw;
+        font-size: 4vw;
     }
     section .skill .skill_box .skill_ic_1,
     section .skill .skill_box .skill_ic_2{
@@ -1958,5 +1981,277 @@ section .contact>p:last-child{left: 44.5%;}
     section .skill .report_box .report_acco li:nth-child(2).acco_on{height: 30vw;}
     section .skill .report_box .report_acco li:nth-child(3).acco_on{height: 30vw;}
     /* -------------skill end------------------ */
+    section .portfolio_1>h1,
+    section .portfolio_2>h1,
+    section .portfolio_3>h1{
+        font-size: 4vw;
+        margin-top: 10vw;
+    }
+    section .portfolio_1, section .portfolio_2, section .portfolio_3{
+        width: 70%;
+        height: 90vw;
+        padding-left: 2%;
+    }
+    section .portfolio_1 .site_box>div .site_link,
+    section .portfolio_2 .site_box2>div .site_link,
+    section .portfolio_3 .site_box3>div .site_link{
+        display: block;
+        width: 10vw; height: 10vw;
+        box-sizing: border-box;
+        border: 1px solid #007803;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%; right: 2.5%;
+        text-align: center;
+        line-height: 2.5vw;
+        padding-top: 2.2vw;
+        font-size: 2.3vw;
+        color: #007803;
+    }
+    section .portfolio_2 .site_box2>div .site_link,
+    section .portfolio_3 .site_box3>div .site_link{
+        right: 81%;
+    }
+    section .portfolio_1 .site_box>div .site_link:hover,
+    section .portfolio_2 .site_box2>div .site_link:hover,
+    section .portfolio_3 .site_box3>div .site_link:hover{
+        box-shadow: 0px 0px 5px #ffffffb9;
+        text-shadow: 0px 0px 5px #ffffffb9;
+    }
+    /* -------------portfolio_1 start------------------ */
+    section .portfolio_1 .btn_1>li{
+        font-size: 3vw;
+        margin-top: 3.5vw;
+        margin-right: 3vw;
+    }
+    section .portfolio_1 .portfol_gr{
+        position: relative;
+    }
+    section .portfolio_1 .portfol_gr .site_box{
+        width: 100%;
+        margin-top: 3.5vw;
+        cursor: pointer;
+    }
+    section .portfolio_1 .portfol_gr .site_box>div .gr_btn,
+    section .portfolio_1 .portfol_gr .site_box>div .gr_btn2,
+    section .portfolio_1 .portfol_gr .site_box>div .gr_btn3{display: none;}
+    section .portfolio_1 .portfol_gr .site_box>div .gr_bn,
+    section .portfolio_1 .portfol_gr .site_box>div .gr_bn2,
+    section .portfolio_1 .portfol_gr .site_box>div .gr_bn3{
+        width: 100%; height: 50vw;
+        left: 0;
+    }
+    section .portfolio_1 .portfol_gr .site_box>div .gr_bn>li,
+    section .portfolio_1 .portfol_gr .site_box>div .gr_bn2>li,
+    section .portfolio_1 .portfol_gr .site_box>div .gr_bn3>li{
+        background-position-y: -70%;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1{
+        width: 100%; height: 50vw;
+        border: 1px solid #afafafc5;
+        margin-left: 0;
+        position: absolute;
+        top: 3.5vw; left: 0;
+        background-color: #ffffff;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.5s;
+        cursor: pointer;
+    } 
+    section .portfolio_1 .portfol_gr .site_txt1>div{
+        width: 95%;
+        box-sizing: border-box;
+        padding-left: 5%;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .txt_title{
+        font-size: 3.5vw;
+        margin-top: 5%;
+        margin-bottom: 3.5%;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .txt_intro{
+        font-size: 2.2vw;
+        margin-bottom: 3%;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li{
+        font-size: 2.2vw;
+        margin-bottom: 2%;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .txt_content>li>div{
+        margin-top: 0.9vw;
+        box-shadow: 0px 0px 1px #231F20;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .website{
+        right: 8%; bottom: 3%;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .website a::after{
+        content: "";
+        display: block;
+        width: 10vw; height: 10vw;
+        border-radius: 50%;
+        border: 1px solid #007803;
+        position: absolute;
+        top: -130%; left: -7%;
+        display: none;
+    }
+    section .portfolio_1 .portfol_gr .site_txt1>div .website>a h5{font-size: 2vw;}
+    section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow{display: none;}
+    section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover::after{display: block;}
+    /* -------------portfolio_1 end------------------ */
+    /* -------------portfolio_2 start------------------ */
+    section .portfolio_2 .btn_2>li{
+        font-size: 3vw;
+        margin-top: 3.5vw;
+        margin-right: 3vw;
+    }
+    section .portfolio_2 .portfol_gr{
+        position: relative;
+    }
+    section .portfolio_2 .portfol_gr .site_box2{
+        width: 100%;
+        margin-top: 3.5vw;
+        cursor: pointer;
+    }
+    section .portfolio_2 .portfol_gr .site_box2>div .gr_btn4,
+    section .portfolio_2 .portfol_gr .site_box2>div .gr_btn5{display: none;}
+    section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4,
+    section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5{
+        width: 100%; height: 50vw;
+        left: 0;
+    }
+    section .portfolio_2 .portfol_gr .site_box2>div .gr_bn4>li,
+    section .portfolio_2 .portfol_gr .site_box2>div .gr_bn5>li{
+        background-position-y: -120%;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2{
+        width: 100%; height: 50vw;
+        border: 1px solid #afafafc5;
+        margin-left: 0;
+        position: absolute;
+        top: 3.5vw; left: 0;
+        background-color: #ffffff;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.5s;
+        cursor: pointer;
+    } 
+    section .portfolio_2 .portfol_gr .site_txt2>div{
+        width: 95%;
+        box-sizing: border-box;
+        padding-left: 5%;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .txt_title{
+        font-size: 3.5vw;
+        margin-top: 5%;
+        margin-bottom: 3.5%;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .txt_intro{
+        font-size: 2.2vw;
+        margin-bottom: 3%;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li{
+        font-size: 2.2vw;
+        margin-bottom: 2%;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .txt_content>li>div{
+        margin-top: 0.9vw;
+        box-shadow: 0px 0px 1px #231F20;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .website{
+        right: 8%; bottom: 3%;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .website a::after{
+        content: "";
+        display: block;
+        width: 10vw; height: 10vw;
+        border-radius: 50%;
+        border: 1px solid #007803;
+        position: absolute;
+        top: -130%; left: -7%;
+        display: none;
+    }
+    section .portfolio_2 .portfol_gr .site_txt2>div .website>a h5{font-size: 2vw;}
+    section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow{display: none;}
+    section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover::after{display: block;}
+    /* -------------portfolio_2 end------------------ */
+     /* -------------portfolio_3 start------------------ */
+     section .portfolio_3 .btn_3>li{
+        font-size: 3vw;
+        margin-top: 3.5vw;
+        margin-right: 3vw;
+    }
+    section .portfolio_3 .portfol_gr{
+        position: relative;
+    }
+    section .portfolio_3 .portfol_gr .site_box3{
+        width: 100%;
+        margin-top: 3.5vw;
+        cursor: pointer;
+    }
+    section .portfolio_3 .portfol_gr .site_box3>div .gr_btn6,
+    section .portfolio_3 .portfol_gr .site_box3>div .gr_btn7,
+    section .portfolio_3 .portfol_gr .site_box3>div .gr_btn8
+    {display: none;}
+    section .portfolio_3 .portfol_gr .site_box3>div .gr_bn6,
+    section .portfolio_3 .portfol_gr .site_box3>div .gr_bn7,
+    section .portfolio_3 .portfol_gr .site_box3>div .gr_bn8
+    {
+        width: 100%; height: 50vw;
+        left: 0;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3{
+        width: 100%; height: 50vw;
+        border: 1px solid #afafafc5;
+        margin-left: 0;
+        position: absolute;
+        top: 3.5vw; left: 0;
+        background-color: #ffffff;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.5s;
+        cursor: pointer;
+    } 
+    section .portfolio_3 .portfol_gr .site_txt3>div{
+        width: 95%;
+        box-sizing: border-box;
+        padding-left: 5%;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .txt_title{
+        font-size: 3.5vw;
+        margin-top: 5%;
+        margin-bottom: 3.5%;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .txt_intro{
+        font-size: 2.2vw;
+        margin-bottom: 3%;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li{
+        font-size: 2.2vw;
+        margin-bottom: 2%;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .txt_content>li>div{
+        margin-top: 0.9vw;
+        box-shadow: 0px 0px 1px #231F20;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .website{
+        right: 8%; bottom: 3%;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3 .cu_txt .website,
+    section .portfolio_3 .portfol_gr .site_txt3 .dorco_txt .website{
+        bottom: -10%;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .website a::after{
+        content: "";
+        display: block;
+        width: 10vw; height: 10vw;
+        border-radius: 50%;
+        border: 1px solid #007803;
+        position: absolute;
+        top: -130%; left: -7%;
+        display: none;
+    }
+    section .portfolio_3 .portfol_gr .site_txt3>div .website>a h5{font-size: 2vw;}
+    section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow{display: none;}
+    section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover::after{display: block;}
+/* -------------portfolio_3 end------------------ */
 }
 /* ------------------------ mob ver. 사이드메뉴 삭제--------------------------------- */
