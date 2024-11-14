@@ -1837,8 +1837,8 @@ section .contact>p:last-child{left: 44.5%;}
         cursor: pointer;
     }
     section .main_mob .ticket_mob .tic_mob1{width: 70%;}
-    section .main_mob .ticket_mob .tic_mob1 img{height: 100%;}
-    section .main_mob .ticket_mob .tic_mob2{width: 30%; margin-left: -0.36%;}
+    section .main_mob .ticket_mob .tic_mob1 img{width: 100%;}
+    section .main_mob .ticket_mob .tic_mob2{width: 30%; margin-left: -0.1%;}
     section .main_mob .ticket_mob .tic_mob2 img{height: 100%;}
     section .main_mob .ticket_mob:hover .tic_mob1{filter: brightness(90%);}
     section .main_mob .ticket_mob:hover .tic_mob2{filter: brightness(90%);}
@@ -1862,13 +1862,16 @@ section .contact>p:last-child{left: 44.5%;}
         top: 17vw;
         left: 20%;
     }
-    section .main_mob .image:hover .image_main{z-index: -1;}
+    /* section .main_mob .image:hover .image_main{z-index: -1;} */
     section .main_mob .image .image_txt{
         width: 55vw; height: 55vw;
         border: 1px solid #00780476;
         background-color: #fff;
         margin-top: 20vw;
         margin-left: 21%;
+        position: relative;
+        z-index: -1;
+        transition: all 0.5s;
     }
     section .main_mob .image .image_txt .profile_mob{
         width: 85%;
@@ -1877,10 +1880,10 @@ section .contact>p:last-child{left: 44.5%;}
     section .main_mob .image .image_txt .profile_mob h3{
         color: #007803;
         font-size: 3vw;
-        padding-top: 5%;
+        padding-top: 3vw;
         padding-bottom: 1vw;
     }
-    section .main_mob .image .image_txt .profile_mob .mob_title{padding-top: 5vw;}
+    section .main_mob .image .image_txt .profile_mob .mob_title{padding-top: 3vw;}
     section .main_mob .image .image_txt .profile_mob>ul>li{
         font-size: 2.3vw;
         margin-top: 1vw;

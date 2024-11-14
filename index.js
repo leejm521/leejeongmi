@@ -269,5 +269,11 @@ $(document).ready(function(){
         $(".ticket_mob").stop().fadeOut();
         $(".image").stop().fadeIn();
     });
+    $(".image").mouseenter(function(){
+        $(".image_txt").css({"z-index":"10"})
+    })
+    $(".image").mouseleave(function(){
+        $(".image_txt").css({"z-index":"-1"})
+    })
 });
 
