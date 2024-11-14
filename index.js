@@ -277,9 +277,6 @@ $(document).ready(function(){
     $(".image").mouseleave(function(){
         $(".image_txt").css({"z-index":"-1"});
     });
-    $(".image_txt").click(function(){
-        $(".image_txt").css({"z-index":"-1"});
-    });
     $(".site_box").hover(function(){
         $(".cursor").toggle();
     });

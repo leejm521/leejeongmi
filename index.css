@@ -2214,5 +2214,67 @@ section .contact>p:last-child{left: 44.5%;}
     section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow{display: none;}
     section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover::after{display: block;}
 /* -------------portfolio_3 end------------------ */
+/* ---------------contact start--------------- */
+section .contact{height: 70vw;}
+section .contact .contact_gr{
+    width: 60%; height: 55vw;
+}
+section .contact .contact_gr .contact_box{
+    height: 55vw;
+    border-radius: 30vw 30vw 0 0;
+}
+section .contact .contact_gr  .contact_box>h1{
+    font-size: 4vw;
+    margin-top: 15%;
+}
+section .contact .contact_gr  .contact_box>h4{
+    font-size: 2.5vw;
+    line-height: 3.2vw;
+}
+section .contact .contact_gr  .contact_box .contact_cont{margin-left: 8%;}
+section .contact .contact_gr  .contact_box .contact_cont .contact_img{
+    width: 18vw; height: 18vw;
+    margin-top: -8%;
+    margin-left: 5%;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call{
+    width: 40%;
+    margin-left: 10%;
+}
+section .contact .contact_gr  .contact_box .contact_cont .call>li{
+    font-size: 2.3vw;
+    margin-top: 0%;
+    padding-left: 5vw;
+}
+section .contact .contact_gr  .contact_behind{
+    height: 55vw;
+    border-radius: 30vw 30vw 0 0;
+}
+section .contact .contact_gr  .contact_behind h1{
+    font-size: 3.5vw;
+    margin-top: 23%;
+}
+section .contact .contact_gr  .contact_behind h2{font-size: 3.5vw;}
+section .contact .contact_gr  .contact_behind h2 span{font-size: 2vw;}
+section .contact .call2 li{
+    font-size: 2.3vw;
+    padding-left: 3.5vw;
+    margin-top: -5%;
+}
+section .contact .call2 li:nth-child(2){
+    padding-left: 4.5vw;
+}
+section .contact .contact_shadow{
+    width: 60%; height: 55vw;
+    border-radius: 30vw 30vw 0 0;
+}
+section .contact>p{display: none;}
+/* ---------------contact end--------------- */
+/* ------------------footer start----------------- */
+    footer{height: 10vw;}
+    footer>h1{
+        font-size: 2vw;
+        margin-top: 3.5vw;
+    }
 }
 /* ------------------------ mob ver. 사이드메뉴 삭제--------------------------------- */
