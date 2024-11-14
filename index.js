@@ -277,29 +277,41 @@ $(document).ready(function(){
     $(".image").mouseleave(function(){
         $(".image_txt").css({"z-index":"-1"});
     });
+    $(".image_txt").click(function(){
+        $(".image_txt").css({"z-index":"-1"});
+    });
+    $(".site_box").hover(function(){
+        $(".cursor").toggle();
+    });
+    $(".site_box2").hover(function(){
+        $(".cursor").toggle();
+    });
+    $(".site_box3").hover(function(){
+        $(".cursor").toggle();
+    });
     $(".site_box").click(function(){
         $(".site_txt1").css({"z-index":"10"});
-        $(".site_txt1").css({"opacity":"1"});
     });
     $(".site_txt1").click(function(){
         $(".site_txt1").css({"z-index":"-1"});
-        $(".site_txt1").css({"opacity":"0"})
     });
     $(".site_box2").click(function(){
         $(".site_txt2").css({"z-index":"10"});
-        $(".site_txt2").css({"opacity":"1"});
     });
     $(".site_txt2").click(function(){
         $(".site_txt2").css({"z-index":"-1"});
-        $(".site_txt2").css({"opacity":"0"})
     });
     $(".site_box3").click(function(){
         $(".site_txt3").css({"z-index":"10"});
-        $(".site_txt3").css({"opacity":"1"});
     });
     $(".site_txt3").click(function(){
         $(".site_txt3").css({"z-index":"-1"});
-        $(".site_txt3").css({"opacity":"0"})
     });
+    $(".site_link").mouseenter(function(){
+        $(".site_link").css({"background-color":"#fff"})
+    })
+    $(".site_link").mouseleave(function(){
+        $(".site_link").css({"background-color":""})
+    })
 });
 

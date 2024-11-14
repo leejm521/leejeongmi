@@ -2007,16 +2007,26 @@ section .contact>p:last-child{left: 44.5%;}
         padding-top: 2.2vw;
         font-size: 2.3vw;
         color: #007803;
+        animation: clickEvent 0.5s linear infinite;
     }
     section .portfolio_2 .site_box2>div .site_link,
     section .portfolio_3 .site_box3>div .site_link{
         right: 81%;
     }
-    section .portfolio_1 .site_box>div .site_link:hover,
-    section .portfolio_2 .site_box2>div .site_link:hover,
-    section .portfolio_3 .site_box3>div .site_link:hover{
-        box-shadow: 0px 0px 5px #ffffffb9;
-        text-shadow: 0px 0px 5px #ffffffb9;
+    
+    @keyframes clickEvent {
+        0%{
+            box-shadow: none;
+            text-shadow: none;
+        }
+        50%{
+            box-shadow: 0px 0px 7px #ffffffb9;
+            text-shadow: 0px 0px 7px #ffffffb9;
+        }
+        100%{
+            box-shadow: none;
+            text-shadow: none;
+        }
     }
     /* -------------portfolio_1 start------------------ */
     section .portfolio_1 .btn_1>li{
@@ -2049,13 +2059,11 @@ section .contact>p:last-child{left: 44.5%;}
     section .portfolio_1 .portfol_gr .site_txt1{
         width: 100%; height: 50vw;
         border: 1px solid #afafafc5;
-        margin-left: 0;
         position: absolute;
-        top: 3.5vw; left: 0;
+        top: 7vw; left: 0;
         background-color: #ffffff;
         z-index: -1;
-        opacity: 0;
-        transition: all 0.5s;
+        transition: all 0.3s;
         cursor: pointer;
     } 
     section .portfolio_1 .portfol_gr .site_txt1>div{
@@ -2080,20 +2088,7 @@ section .contact>p:last-child{left: 44.5%;}
         margin-top: 0.9vw;
         box-shadow: 0px 0px 1px #231F20;
     }
-    section .portfolio_1 .portfol_gr .site_txt1>div .website{
-        right: 8%; bottom: 3%;
-    }
-    section .portfolio_1 .portfol_gr .site_txt1>div .website a::after{
-        content: "";
-        display: block;
-        width: 10vw; height: 10vw;
-        border-radius: 50%;
-        border: 1px solid #007803;
-        position: absolute;
-        top: -130%; left: -7%;
-        display: none;
-    }
-    section .portfolio_1 .portfol_gr .site_txt1>div .website>a h5{font-size: 2vw;}
+    section .portfolio_1 .portfol_gr .site_txt1>div .website{display: none;}
     section .portfolio_1 .portfol_gr .site_txt1>div .website>a .arrow{display: none;}
     section .portfolio_1 .portfol_gr .site_txt1>div .website>a:hover::after{display: block;}
     /* -------------portfolio_1 end------------------ */
@@ -2125,12 +2120,10 @@ section .contact>p:last-child{left: 44.5%;}
     section .portfolio_2 .portfol_gr .site_txt2{
         width: 100%; height: 50vw;
         border: 1px solid #afafafc5;
-        margin-left: 0;
         position: absolute;
-        top: 3.5vw; left: 0;
+        top: 7vw; left: 0;
         background-color: #ffffff;
         z-index: -1;
-        opacity: 0;
         transition: all 0.5s;
         cursor: pointer;
     } 
@@ -2156,20 +2149,7 @@ section .contact>p:last-child{left: 44.5%;}
         margin-top: 0.9vw;
         box-shadow: 0px 0px 1px #231F20;
     }
-    section .portfolio_2 .portfol_gr .site_txt2>div .website{
-        right: 8%; bottom: 3%;
-    }
-    section .portfolio_2 .portfol_gr .site_txt2>div .website a::after{
-        content: "";
-        display: block;
-        width: 10vw; height: 10vw;
-        border-radius: 50%;
-        border: 1px solid #007803;
-        position: absolute;
-        top: -130%; left: -7%;
-        display: none;
-    }
-    section .portfolio_2 .portfol_gr .site_txt2>div .website>a h5{font-size: 2vw;}
+    section .portfolio_2 .portfol_gr .site_txt2>div .website{display: none;}
     section .portfolio_2 .portfol_gr .site_txt2>div .website>a .arrow{display: none;}
     section .portfolio_2 .portfol_gr .site_txt2>div .website>a:hover::after{display: block;}
     /* -------------portfolio_2 end------------------ */
@@ -2201,12 +2181,10 @@ section .contact>p:last-child{left: 44.5%;}
     section .portfolio_3 .portfol_gr .site_txt3{
         width: 100%; height: 50vw;
         border: 1px solid #afafafc5;
-        margin-left: 0;
         position: absolute;
-        top: 3.5vw; left: 0;
+        top: 7vw; left: 0;
         background-color: #ffffff;
         z-index: -1;
-        opacity: 0;
         transition: all 0.5s;
         cursor: pointer;
     } 
@@ -2232,24 +2210,7 @@ section .contact>p:last-child{left: 44.5%;}
         margin-top: 0.9vw;
         box-shadow: 0px 0px 1px #231F20;
     }
-    section .portfolio_3 .portfol_gr .site_txt3>div .website{
-        right: 8%; bottom: 3%;
-    }
-    section .portfolio_3 .portfol_gr .site_txt3 .cu_txt .website,
-    section .portfolio_3 .portfol_gr .site_txt3 .dorco_txt .website{
-        bottom: -10%;
-    }
-    section .portfolio_3 .portfol_gr .site_txt3>div .website a::after{
-        content: "";
-        display: block;
-        width: 10vw; height: 10vw;
-        border-radius: 50%;
-        border: 1px solid #007803;
-        position: absolute;
-        top: -130%; left: -7%;
-        display: none;
-    }
-    section .portfolio_3 .portfol_gr .site_txt3>div .website>a h5{font-size: 2vw;}
+    section .portfolio_3 .portfol_gr .site_txt3>div .website{display: none;}
     section .portfolio_3 .portfol_gr .site_txt3>div .website>a .arrow{display: none;}
     section .portfolio_3 .portfol_gr .site_txt3>div .website>a:hover::after{display: block;}
 /* -------------portfolio_3 end------------------ */
